@@ -6,7 +6,8 @@
   find-skill --tag motion --tag 3d   everything carrying these tags
   find-skill --tags                  the tag vocabulary with counts
 
-Prints at most 8 lines. Each line is one skill: name, phase, tags, trigger, path.
+Prints at most 8 lines: name, phase, read cost in tokens, tags, trigger.
+A "+" on the cost means the skill carries extra reference files beyond SKILL.md.
 Read a SKILL.md only after this tells you which one, and never more than two.
 """
 import re, sys
@@ -21,8 +22,8 @@ def rows():
         if line.startswith("#"):
             continue
         p = line.split("\t")
-        if len(p) == 5:
-            yield dict(zip(("name", "phase", "tags", "trigger", "path"), p))
+        if len(p) == 6:
+            yield dict(zip(("name", "phase", "tags", "cost", "trigger", "path"), p))
 
 
 def show(rs, note=""):
@@ -33,8 +34,8 @@ def show(rs, note=""):
     w = max(len(r["name"]) for r in rs)
     for r in rs:
         tags = ",".join(r["tags"].split(",")[:3])
-        trig = r["trigger"][:70].rstrip() + ("…" if len(r["trigger"]) > 70 else "")
-        print(f"{r['name']:<{w}}  p{r['phase']}  [{tags}]  {trig}")
+        trig = r["trigger"][:66].rstrip() + ("…" if len(r["trigger"]) > 66 else "")
+        print(f"{r['name']:<{w}}  p{r['phase']}  {r['cost']:>3}  [{tags}]  {trig}")
     print(f"paths: library/<upstream>/<name>/SKILL.md — " + ", ".join(r["path"].split("/")[1] + "/" + r["name"] for r in rs[:3]) + " …")
     if note:
         print(note)

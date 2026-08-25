@@ -1,11 +1,11 @@
-# name	phase	tags	trigger	path
-audit-reference-originality	2	motion,layout,copy,review,style,media	Audit a website or digital experience against its supplied source references for originality and plagiarism ri…	library/mengto/audit-reference-originality/SKILL.md
-build-awwwards-quality-sites	2	motion,scroll,3d,a11y,perf,style,landing,media	Art-direct and implement distinctive, motion-rich marketing, editorial, portfolio, and landing websites with o…	library/mengto/build-awwwards-quality-sites/SKILL.md
-design-first-ui-prompting	2	type,layout	Use when you need design-first, spec-driven, skimmable prompts for UI generation	library/mengto/design-first-ui-prompting/SKILL.md
-generate-reference-inspired-brand-worlds	2	copy,style,media	Generate multiple original brand campaign worlds from a supplied visual reference while controlling how close …	library/mengto/generate-reference-inspired-brand-worlds/SKILL.md
-html-to-interaction-prompts	2	motion,media	Convert a supplied HTML page or generated HTML reference into a screenshot-backed article containing multiple …	library/mengto/html-to-interaction-prompts/SKILL.md
-ideagram	2	color,style,landing	Turn a concept, feature description, blog post, or pitch into a single beautiful, on-brand illustration by mat…	library/tastemaker/ideagram/SKILL.md
-landing-page-design	2	motion,type,color,layout,copy,review,style,landing,system	Complete system for building high converting landing pages: intake questions, page structure, layout selection…	library/elaya/landing-page-design/SKILL.md
-stitched-full-page-capture	2	motion,scroll,3d,copy,perf,media,effect	Capture or repair reliable full-page screenshots for lazy-loaded, scroll-animated, Framer, WebGL/canvas, or re…	library/mengto/stitched-full-page-capture/SKILL.md
-tastemaker	2	review,style,landing,media	Generate genuinely beautiful, on-brand UI instead of generic "AI slop" — use whenever the user asks to build, …	library/tastemaker/tastemaker/SKILL.md
-video-to-superprompt	2	motion,scroll,3d,type,color,media	Turn a reference video into a super detailed recreation or inspiration prompt	library/mengto/video-to-superprompt/SKILL.md
+# name	phase	tags	cost	trigger	path
+audit-reference-originality	2	motion,layout,copy,review,style,media	2k+	Audit a website or digital experience against its supplied source references for originality and plagiarism ri…	library/mengto/audit-reference-originality/SKILL.md
+build-awwwards-quality-sites	2	motion,scroll,3d,a11y,perf,style,landing,media	2k	Art-direct and implement distinctive, motion-rich marketing, editorial, portfolio, and landing websites with o…	library/mengto/build-awwwards-quality-sites/SKILL.md
+design-first-ui-prompting	2	type,layout	1k	Use when you need design-first, spec-driven, skimmable prompts for UI generation	library/mengto/design-first-ui-prompting/SKILL.md
+generate-reference-inspired-brand-worlds	2	copy,style,media	2k+	Generate multiple original brand campaign worlds from a supplied visual reference while controlling how close …	library/mengto/generate-reference-inspired-brand-worlds/SKILL.md
+html-to-interaction-prompts	2	motion,media	4k	Convert a supplied HTML page or generated HTML reference into a screenshot-backed article containing multiple …	library/mengto/html-to-interaction-prompts/SKILL.md
+ideagram	2	color,style,landing	2k+	Turn a concept, feature description, blog post, or pitch into a single beautiful, on-brand illustration by mat…	library/tastemaker/ideagram/SKILL.md
+landing-page-design	2	motion,type,color,layout,copy,review,style,landing,system	4k	Complete system for building high converting landing pages: intake questions, page structure, layout selection…	library/elaya/landing-page-design/SKILL.md
+stitched-full-page-capture	2	motion,scroll,3d,copy,perf,media,effect	1k	Capture or repair reliable full-page screenshots for lazy-loaded, scroll-animated, Framer, WebGL/canvas, or re…	library/mengto/stitched-full-page-capture/SKILL.md
+tastemaker	2	review,style,landing,media	14k+	Generate genuinely beautiful, on-brand UI instead of generic "AI slop" — use whenever the user asks to build, …	library/tastemaker/tastemaker/SKILL.md
+video-to-superprompt	2	motion,scroll,3d,type,color,media	1k	Turn a reference video into a super detailed recreation or inspiration prompt	library/mengto/video-to-superprompt/SKILL.md

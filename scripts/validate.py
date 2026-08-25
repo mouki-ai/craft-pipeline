@@ -30,10 +30,10 @@ rows = [l.split("\t") for l in (PLUGIN / "catalog" / "index.tsv").read_text().sp
         if not l.startswith("#")]
 names = set()
 for r in rows:
-    if len(r) != 5:
+    if len(r) != 6:
         errors.append(f"malformed catalog row: {r[:1]}"); continue
-    if not (PLUGIN / r[4]).exists():
-        errors.append(f"catalog points at a missing file: {r[4]}")
+    if not (PLUGIN / r[5]).exists():
+        errors.append(f"catalog points at a missing file: {r[5]}")
     if r[0] in names:
         errors.append(f"duplicate catalog name: {r[0]}")
     names.add(r[0])

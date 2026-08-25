@@ -1,6 +1,8 @@
 # The catalog
 
-`catalog/index.tsv` — one tab-separated line per skill: `name · phase · tags · trigger · path`.
+`catalog/index.tsv` — one tab-separated line per skill: `name · phase · tags · cost · trigger · path`.
+`cost` is the rounded token price of reading that skill's `SKILL.md`; a `+` means it carries
+further reference files.
 268 lines, about 12k tokens if read whole, which is why nothing reads it whole. `find-skill`
 scores it and returns ten lines; `grep` works the same way if the shell is unavailable.
 

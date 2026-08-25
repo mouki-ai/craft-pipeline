@@ -147,20 +147,23 @@ def main():
             copy_skill(src, PLUGIN / "library" / uid / name, {
                 "upstream": u["repo"], "commit": u["commit"], "license": u["license"],
                 "holder": u["holder"], "path": str(src.relative_to(CACHE / uid))})
+            body = (PLUGIN / "library" / uid / name / "SKILL.md").stat().st_size
+            extra = sum(f.stat().st_size for f in (PLUGIN / "library" / uid / name).rglob("*.md")) - body
             rows.append({"name": name, "phase": phase_of.get((uid, name), "-"),
                          "tags": ",".join(tags_for(name, desc)), "trigger": trigger_of(desc),
+                         "cost": f"{max(1, round(body / 4000))}k" + ("+" if extra > 4000 else ""),
                          "path": f"library/{uid}/{name}/SKILL.md"})
             total += 1
         print(f"  {uid}: {len(table)}")
 
     rows.sort(key=lambda r: (r["phase"] == "-", r["phase"], r["name"]))
-    head = "# name\tphase\ttags\ttrigger\tpath\n"
+    head = "# name\tphase\ttags\tcost\ttrigger\tpath\n"
     (PLUGIN / "catalog" / "index.tsv").write_text(
-        head + "".join(f"{r['name']}\t{r['phase']}\t{r['tags']}\t{r['trigger']}\t{r['path']}\n" for r in rows))
+        head + "".join(f"{r['name']}\t{r['phase']}\t{r['tags']}\t{r['cost']}\t{r['trigger']}\t{r['path']}\n" for r in rows))
     for ph, spec in sorted(CFG["phases"].items()):
         sel = [r for r in rows if r["phase"] == ph]
         (PLUGIN / "catalog" / "by-phase" / f"{ph}-{spec['title'].lower().replace(' ', '-').replace('&', 'and')}.tsv").write_text(
-            head + "".join(f"{r['name']}\t{r['phase']}\t{r['tags']}\t{r['trigger']}\t{r['path']}\n" for r in sel))
+            head + "".join(f"{r['name']}\t{r['phase']}\t{r['tags']}\t{r['cost']}\t{r['trigger']}\t{r['path']}\n" for r in sel))
     counts = {}
     for r in rows:
         for t in r["tags"].split(","):

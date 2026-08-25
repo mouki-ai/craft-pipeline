@@ -1,18 +1,18 @@
-# name	phase	tags	trigger	path
-animate	5	motion,review	Build an animation from scratch, making the decisions in the order that determines whether it feels right — sh…	library/emilkowalski/animate/SKILL.md
-animation-systems	5	motion,scroll,a11y,perf	Use when designing or implementing product-grade web motion like Stripe, Linear, Apple, and Vercel	library/mengto/animation-systems/SKILL.md
-animation-vocabulary	5	motion,scroll,system	Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term…	library/emilkowalski/animation-vocabulary/SKILL.md
-apple-design	5	motion,type,review	Apple's approach to interface design and fluid, physical motion, translated for the web	library/emilkowalski/apple-design/SKILL.md
-cinematic-gsap-lenis-motion-system	5	motion,scroll,style,effect	Create premium cinematic web motion systems with GSAP, ScrollTrigger, and Lenis	library/mengto/cinematic-gsap-lenis-motion-system/SKILL.md
-cinematic-scroll-storytelling	5	motion,scroll,type,style,landing,effect	Create cinematic scroll-driven landing pages with Lenis smooth scrolling, GSAP ScrollTrigger, scroll-linked pr…	library/mengto/cinematic-scroll-storytelling/SKILL.md
-emil-design-eng	5	motion	This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the inv…	library/emilkowalski/emil-design-eng/SKILL.md
-find-animation-opportunities	5	motion,review	Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't	library/emilkowalski/find-animation-opportunities/SKILL.md
-gsap	5	motion,scroll,perf	Use when you need to add or debug professional web animations with GSAP (timelines, ScrollTrigger, stagger, tr…	library/mengto/gsap/SKILL.md
-improve-animations	5	motion,review,research	Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and…	library/emilkowalski/improve-animations/SKILL.md
-masked-reveal	5	scroll,copy,style,landing,effect	Create masked staggered word reveals on scroll with GSAP ScrollTrigger	library/mengto/masked-reveal/SKILL.md
-pick-ui-library	5	misc	Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, chart…	library/emilkowalski/pick-ui-library/SKILL.md
-prototype	5	media	Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you…	library/emilkowalski/prototype/SKILL.md
-review-animations	5	motion,review	Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering phi…	library/emilkowalski/review-animations/SKILL.md
-scroll-progress-timeline	5	motion,scroll,layout,copy	Turn any ordered process into a data-driven vertical or horizontal scroll story with a base line, progress fil…	library/mengto/scroll-progress-timeline/SKILL.md
-scroll-scrubbed-visual-sequence	5	scroll,landing,media	Build reversible scroll-controlled visual transformations with a pinned or sticky stage, normalized progress, …	library/mengto/scroll-scrubbed-visual-sequence/SKILL.md
-scroll-scrubbed-word-reveal	5	motion,scroll,type,layout,style,effect	Reveal marked-up text word by word as scroll progress advances, while preserving semantic inline links, emphas…	library/mengto/scroll-scrubbed-word-reveal/SKILL.md
+# name	phase	tags	cost	trigger	path
+animate	5	motion,review	3k+	Build an animation from scratch, making the decisions in the order that determines whether it feels right — sh…	library/emilkowalski/animate/SKILL.md
+animation-systems	5	motion,scroll,a11y,perf	1k	Use when designing or implementing product-grade web motion like Stripe, Linear, Apple, and Vercel	library/mengto/animation-systems/SKILL.md
+animation-vocabulary	5	motion,scroll,system	3k	Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term…	library/emilkowalski/animation-vocabulary/SKILL.md
+apple-design	5	motion,type,review	6k	Apple's approach to interface design and fluid, physical motion, translated for the web	library/emilkowalski/apple-design/SKILL.md
+cinematic-gsap-lenis-motion-system	5	motion,scroll,style,effect	4k	Create premium cinematic web motion systems with GSAP, ScrollTrigger, and Lenis	library/mengto/cinematic-gsap-lenis-motion-system/SKILL.md
+cinematic-scroll-storytelling	5	motion,scroll,type,style,landing,effect	3k	Create cinematic scroll-driven landing pages with Lenis smooth scrolling, GSAP ScrollTrigger, scroll-linked pr…	library/mengto/cinematic-scroll-storytelling/SKILL.md
+emil-design-eng	5	motion	7k	This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the inv…	library/emilkowalski/emil-design-eng/SKILL.md
+find-animation-opportunities	5	motion,review	2k	Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't	library/emilkowalski/find-animation-opportunities/SKILL.md
+gsap	5	motion,scroll,perf	1k	Use when you need to add or debug professional web animations with GSAP (timelines, ScrollTrigger, stagger, tr…	library/mengto/gsap/SKILL.md
+improve-animations	5	motion,review,research	2k+	Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and…	library/emilkowalski/improve-animations/SKILL.md
+masked-reveal	5	scroll,copy,style,landing,effect	1k	Create masked staggered word reveals on scroll with GSAP ScrollTrigger	library/mengto/masked-reveal/SKILL.md
+pick-ui-library	5	misc	1k	Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, chart…	library/emilkowalski/pick-ui-library/SKILL.md
+prototype	5	media	2k+	Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you…	library/emilkowalski/prototype/SKILL.md
+review-animations	5	motion,review	2k+	Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering phi…	library/emilkowalski/review-animations/SKILL.md
+scroll-progress-timeline	5	motion,scroll,layout,copy	1k	Turn any ordered process into a data-driven vertical or horizontal scroll story with a base line, progress fil…	library/mengto/scroll-progress-timeline/SKILL.md
+scroll-scrubbed-visual-sequence	5	scroll,landing,media	1k	Build reversible scroll-controlled visual transformations with a pinned or sticky stage, normalized progress, …	library/mengto/scroll-scrubbed-visual-sequence/SKILL.md
+scroll-scrubbed-word-reveal	5	motion,scroll,type,layout,style,effect	1k	Reveal marked-up text word by word as scroll progress advances, while preserving semantic inline links, emphas…	library/mengto/scroll-scrubbed-word-reveal/SKILL.md

@@ -38,7 +38,7 @@ ${CLAUDE_PLUGIN_ROOT}/bin/find-skill --tag motion --tag 3d  # by tag
 ${CLAUDE_PLUGIN_ROOT}/bin/find-skill --tags                 # the vocabulary
 ```
 
-Ten lines back, each with a name, phase, tags, one-line trigger and path. That output is usually enough to decide; sometimes it is enough to answer.
+Eight lines back: name, phase, **what it costs to read**, tags, one-line trigger. That output is usually enough to decide, and sometimes enough to answer outright. A `+` on the cost means the skill carries extra reference files beyond its `SKILL.md`.
 
 No shell? `grep -i "scroll" ${CLAUDE_PLUGIN_ROOT}/catalog/index.tsv | head`. Same data, same rule: grep it, never read it whole.
 
@@ -48,11 +48,22 @@ Then:
 - **Two or more tie** → this is the moment to talk, not to read both. One line to the user: the two names, what each would change, which you would take. Wait. This is the cheapest question in the whole pipeline and it prevents the most expensive mistake.
 - **Nothing fits** → decide yourself, name the reasoning in a sentence, move on.
 
+### Skills that cost more than 5k
+
+Eight of the 268 are long — `tastemaker` alone is 14k. Do not swallow one whole to answer a narrow question. Read its shape first, then one section:
+
+```bash
+grep -n '^#' library/tastemaker/tastemaker/SKILL.md      # headings with line numbers
+sed -n '120,190p' library/tastemaker/tastemaker/SKILL.md  # the one section you need
+```
+
+Read it whole only when the whole thing is the point — when it is setting the direction for the project rather than answering one question inside it.
+
 ## Budgets
 
 - **Two `SKILL.md` per decision.** A third means the decision is not defined; go back and split it.
 - **Six per phase. Twelve per project.** Hitting the ceiling is a signal about the direction, not about the budget.
-- Never read a skill "to see what's in it". The catalog line is what's in it.
+- Never read a skill "to see what's in it". The catalog line is what's in it, and its cost column tells you what looking would have cost.
 - Never read a skill for a phase you are not in.
 
 ## The session log

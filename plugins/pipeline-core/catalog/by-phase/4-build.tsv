@@ -1,12 +1,12 @@
-# name	phase	tags	trigger	path
-better-accessibility	4	motion,a11y,review	Accessibility engineering for product interfaces	library/jakubkrehel/better-accessibility/SKILL.md
-better-colors	4	color,review,style,landing,system	Color systems for digital products	library/jakubkrehel/better-colors/SKILL.md
-better-interface	4	review	- Cross-discipline interface review	library/jakubkrehel/better-interface/SKILL.md
-better-layout	4	layout,review	Layout structure for web interfaces	library/jakubkrehel/better-layout/SKILL.md
-better-typography	4	type,layout	Web typography	library/jakubkrehel/better-typography/SKILL.md
-better-ui	4	motion,media	Design engineering principles for making interfaces feel polished	library/jakubkrehel/better-ui/SKILL.md
-better-writing	4	copy,review	- UX writing and interface copy	library/jakubkrehel/better-writing/SKILL.md
-break	4	media	Answers "does this survive?" for one component	library/jakubkrehel/break/SKILL.md
-explain-interface	4	media	Answers "how was this built?" about an interface	library/jakubkrehel/explain-interface/SKILL.md
-interface-review	4	review	- Interface review of a change rather than a screen: uncommitted work, the current branch, or a pull request	library/jakubkrehel/interface-review/SKILL.md
-variant	4	misc	Answers "which of these?" rather than "is this right?"	library/jakubkrehel/variant/SKILL.md
+# name	phase	tags	cost	trigger	path
+better-accessibility	4	motion,a11y,review	2k+	Accessibility engineering for product interfaces	library/jakubkrehel/better-accessibility/SKILL.md
+better-colors	4	color,review,style,landing,system	2k+	Color systems for digital products	library/jakubkrehel/better-colors/SKILL.md
+better-interface	4	review	2k	- Cross-discipline interface review	library/jakubkrehel/better-interface/SKILL.md
+better-layout	4	layout,review	1k+	Layout structure for web interfaces	library/jakubkrehel/better-layout/SKILL.md
+better-typography	4	type,layout	3k+	Web typography	library/jakubkrehel/better-typography/SKILL.md
+better-ui	4	motion,media	2k+	Design engineering principles for making interfaces feel polished	library/jakubkrehel/better-ui/SKILL.md
+better-writing	4	copy,review	2k	- UX writing and interface copy	library/jakubkrehel/better-writing/SKILL.md
+break	4	media	2k+	Answers "does this survive?" for one component	library/jakubkrehel/break/SKILL.md
+explain-interface	4	media	3k+	Answers "how was this built?" about an interface	library/jakubkrehel/explain-interface/SKILL.md
+interface-review	4	review	3k+	- Interface review of a change rather than a screen: uncommitted work, the current branch, or a pull request	library/jakubkrehel/interface-review/SKILL.md
+variant	4	misc	2k	Answers "which of these?" rather than "is this right?"	library/jakubkrehel/variant/SKILL.md
