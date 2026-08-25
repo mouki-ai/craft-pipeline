@@ -1,9 +1,9 @@
-review	71
-layout	63
-motion	57
+review	72
+layout	64
+motion	58
 style	54
 perf	49
-media	45
+media	46
 3d	43
 effect	41
 copy	38
@@ -12,8 +12,8 @@ landing	33
 type	27
 misc	27
 game	27
-research	24
-scroll	23
+research	25
+scroll	24
 system	20
 a11y	19
 ship	6

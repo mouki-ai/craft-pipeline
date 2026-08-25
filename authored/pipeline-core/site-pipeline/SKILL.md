@@ -5,7 +5,7 @@ description: Router and phase map for design, motion, interface and 3D work on w
 
 # Site pipeline
 
-You have 268 skills available. You are not going to read them. This skill exists so that the right two arrive at the right moment and the other 266 cost nothing.
+You have 269 skills available. You are not going to read them. This skill exists so that the right two arrive at the right moment and the other 267 cost nothing.
 
 ## What things cost
 
@@ -16,7 +16,7 @@ You have 268 skills available. You are not going to read them. This skill exists
 | One `find-skill` lookup | ~300 tokens |
 | Reading one library `SKILL.md` | 1.5k-6k tokens |
 | Reading the whole catalog | ~12k tokens — never do this |
-| Registering all 268 instead | ~20k tokens of descriptions, in every session, before any work |
+| Registering all 269 instead | ~20k tokens of descriptions, in every session, before any work |
 
 A read is affordable when it changes what you build. It is waste when you already know the answer, when the decision is trivial, or when the same skill was already read this session.
 
@@ -50,7 +50,7 @@ Then:
 
 ### Skills that cost more than 5k
 
-Eight of the 268 are long — `tastemaker` alone is 14k. Do not swallow one whole to answer a narrow question. Read its shape first, then one section:
+Nine of the 269 are long — `tastemaker` alone is 14k. Do not swallow one whole to answer a narrow question. Read its shape first, then one section:
 
 ```bash
 grep -n '^#' library/tastemaker/tastemaker/SKILL.md      # headings with line numbers
@@ -113,7 +113,7 @@ Two skills from different rows may run in one turn. Two from the same row may no
 | 7 | QA | Full-page review, a11y pass, perf pass, originality check | `--phase 7` |
 | 8 | Ship | Live URL, known rollback, capture for the case study | `--phase 8` |
 
-**If `10k-websites` / `chatgpt-scrollcraft` is installed, it owns the build** — its phases, gates and quality floor. This skill then does one job: at each of its phases, pick the craft skills by the rules above. Never run two site builders side by side.
+**The builder lives in the library.** `library/scrollcraft/chatgpt-scrollcraft/SKILL.md` is the full build workflow — phases, gates, approval loop, quality floor — and it owns the build whenever a real site is being made. Read it once at project start (~4.4k tokens, the one read that is always worth it) or rely on the installed copy if the user already has that skill. This skill then does one job: at each of its phases, pick the craft skills by the rules above. Never run two site builders side by side.
 
 ## Talking about it
 

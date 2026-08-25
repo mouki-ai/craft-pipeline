@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/mouki-ai/chatgpt-scrollcraft",
+  "commit": "f878e7f2042bc11ed5493d77c854e1866a8774b3",
+  "license": "MIT",
+  "holder": "mouki-ai",
+  "path": "."
+}

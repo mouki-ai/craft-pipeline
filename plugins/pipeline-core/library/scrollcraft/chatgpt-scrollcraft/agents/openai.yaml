@@ -1,0 +1,14 @@
+interface:
+  display_name: ChatGPT Scrollcraft
+  short_description: Build premium scroll-driven websites
+  default_prompt: Use $chatgpt-scrollcraft to design and build a distinctive scroll-driven
+    landing page, then verify it on desktop and mobile.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

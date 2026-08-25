@@ -2,6 +2,13 @@
   "_comment": "Pinned upstream sources. Update commits here, then run scripts/vendor.py to re-vendor.",
   "upstream": [
     {
+      "id": "scrollcraft",
+      "repo": "https://github.com/mouki-ai/chatgpt-scrollcraft",
+      "commit": "f878e7f2042bc11ed5493d77c854e1866a8774b3",
+      "license": "MIT",
+      "holder": "mouki-ai"
+    },
+    {
       "id": "jakubkrehel",
       "repo": "https://github.com/jakubkrehel/skills",
       "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
@@ -63,9 +70,6 @@
       "video"
     ],
     "max_file_bytes": 262144
-  },
-  "_notes": {
-    "scrollcraft": "github.com/mouki-ai/chatgpt-scrollcraft @1eb8f930 carries no LICENSE file, so it is referenced by the orchestrator, never copied into this repo. Install it separately."
   },
   "phases": {
     "7": {
@@ -164,6 +168,14 @@
         "designer": [
           "design-qa-checklist",
           "accessibility-audit"
+        ]
+      }
+    },
+    "1": {
+      "title": "Architecture",
+      "owners": {
+        "scrollcraft": [
+          "chatgpt-scrollcraft"
         ]
       }
     }

@@ -1,4 +1,5 @@
 # name	phase	tags	cost	trigger	path
+chatgpt-scrollcraft	1	motion,scroll,layout,review,media,research	4k+	Build premium reference-led scroll-driven websites in ChatGPT Work	library/scrollcraft/chatgpt-scrollcraft/SKILL.md
 audit-reference-originality	2	motion,layout,copy,review,style,media	2k+	Audit a website or digital experience against its supplied source references for originality and plagiarism ri…	library/mengto/audit-reference-originality/SKILL.md
 build-awwwards-quality-sites	2	motion,scroll,3d,a11y,perf,style,landing,media	2k	Art-direct and implement distinctive, motion-rich marketing, editorial, portfolio, and landing websites with o…	library/mengto/build-awwwards-quality-sites/SKILL.md
 design-first-ui-prompting	2	type,layout	1k	Use when you need design-first, spec-driven, skimmable prompts for UI generation	library/mengto/design-first-ui-prompting/SKILL.md

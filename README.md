@@ -1,13 +1,13 @@
 # craft-pipeline
 
-268 agent skills from seven open collections, plus one router that decides which two of
-them to read for the decision in front of you — and leaves the other 266 unread.
+269 agent skills from eight open collections, plus one router that decides which two of
+them to read for the decision in front of you — and leaves the other 267 unread.
 
 **Always in context: ~100 tokens.** Not 20k.
 
 ## The problem this solves
 
-Installing 268 skills does not give an agent 268 abilities. Their descriptions collide —
+Installing 269 skills does not give an agent 268 abilities. Their descriptions collide —
 57 mention motion, 63 mention layout, 71 mention review — so two or three fire for the
 same question and the page ends up designed by committee. The descriptions alone cost
 about 20k tokens in every session, before any work starts.
@@ -55,8 +55,8 @@ the cheapest move in the pipeline and it prevents the most expensive mistake.
   is a signal about the direction, not the budget.
 - **A session log** at `.pipeline/session.md` — the rules extracted from a skill, so the next
   decision reads four lines instead of re-reading 4k tokens.
-- **Deference**: if `10k-websites` / `chatgpt-scrollcraft` is installed, that skill owns the
-  build and this one only routes underneath it.
+- **Deference**: the full build workflow (`chatgpt-scrollcraft`) ships in the library and owns
+  the build itself; the router only decides what to load at each of its phases.
 
 ## Layout
 
@@ -64,7 +64,7 @@ the cheapest move in the pipeline and it prevents the most expensive mistake.
 authored/pipeline-core/     hand-written: the router, its references, bin/find-skill
 plugins/pipeline-core/      generated — do not hand-edit
   skills/site-pipeline/       the one registered skill
-  library/<upstream>/<name>/  268 vendored skills, never auto-loaded
+  library/<upstream>/<name>/  269 vendored skills, never auto-loaded
   catalog/index.tsv           one grep-able line per skill
   catalog/by-phase/*.tsv      the curated per-phase shortlists
   bin/find-skill              the lookup command
@@ -87,6 +87,5 @@ output and costs no context. Author your own always-on skills in
 
 ## Licences
 
-All seven upstreams are MIT. Each vendored folder carries `_source.json` with repo, commit,
-licence and holder. `NOTICE.md` has the full table, plus the one collection referenced rather
-than vendored for want of a licence.
+All eight upstreams are MIT. Each vendored folder carries `_source.json` with repo, commit,
+licence and holder. `NOTICE.md` has the full table.
