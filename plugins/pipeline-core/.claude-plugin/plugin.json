@@ -1,0 +1,8 @@
+{
+  "name": "pipeline-core",
+  "description": "The orchestrator. Owns the phases, the gates and the routing table.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Dart"
+  }
+}

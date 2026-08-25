@@ -1,0 +1,8 @@
+{
+  "name": "craft-3d",
+  "description": "Phase 6: WebGL / Three.js scenes and 3D scroll worlds.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Dart"
+  }
+}

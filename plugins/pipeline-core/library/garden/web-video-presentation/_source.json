@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/ConardLi/garden-skills",
+  "commit": "aaf9a82f5efd73e87cc0998edc398e75bfc35901",
+  "license": "MIT",
+  "holder": "ConardLi",
+  "path": "skills/web-video-presentation"
+}

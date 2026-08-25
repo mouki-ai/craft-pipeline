@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/jakubkrehel/skills",
+  "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+  "license": "MIT",
+  "holder": "Jakub Krehel",
+  "path": "skills/break"
+}

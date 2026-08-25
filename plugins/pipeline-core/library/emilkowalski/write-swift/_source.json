@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/emilkowalski/skills",
+  "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+  "license": "MIT",
+  "holder": "Emil Kowalski",
+  "path": "skills/write-swift"
+}

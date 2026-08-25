@@ -1,0 +1,177 @@
+{
+  "_comment": "Pinned upstream sources. Update commits here, then run scripts/vendor.py to re-vendor.",
+  "upstream": [
+    {
+      "id": "jakubkrehel",
+      "repo": "https://github.com/jakubkrehel/skills",
+      "commit": "ca483852de23d48ab4f4ea71da37dad12bd70a95",
+      "license": "MIT",
+      "holder": "Jakub Krehel"
+    },
+    {
+      "id": "emilkowalski",
+      "repo": "https://github.com/emilkowalski/skills",
+      "commit": "d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7",
+      "license": "MIT",
+      "holder": "Emil Kowalski"
+    },
+    {
+      "id": "tastemaker",
+      "repo": "https://github.com/codeswithroh/tastemaker",
+      "commit": "45313ce9f60971134704a17f7b1a64c30909c240",
+      "license": "MIT",
+      "holder": "codeswithroh"
+    },
+    {
+      "id": "elaya",
+      "repo": "https://github.com/elayadesign/ai-design-skills",
+      "commit": "1c1e97cb9878e236552c772092dda7adcdddbcb2",
+      "license": "MIT",
+      "holder": "Elaya"
+    },
+    {
+      "id": "mengto",
+      "repo": "https://github.com/MengTo/Skills",
+      "commit": "4c716b516b6b0143f3037631306b3730d2832344",
+      "license": "MIT",
+      "holder": "Meng To"
+    },
+    {
+      "id": "designer",
+      "repo": "https://github.com/Owl-Listener/designer-skills",
+      "commit": "20e34c4a587e5eb09fcdf8351fa97b3ad761b31e",
+      "license": "MIT",
+      "holder": "MC Dean"
+    },
+    {
+      "id": "garden",
+      "repo": "https://github.com/ConardLi/garden-skills",
+      "commit": "aaf9a82f5efd73e87cc0998edc398e75bfc35901",
+      "license": "MIT",
+      "holder": "ConardLi"
+    }
+  ],
+  "core": {
+    "pipeline-core": {
+      "description": "The orchestrator. Owns the phases, the gates and the routing table.",
+      "skills": {
+        "mengto": [
+          "iterate-until-verified",
+          "audit-verify-explain-grade-5"
+        ]
+      }
+    },
+    "craft-direction": {
+      "description": "Phase 2: taste, art direction, reference intake.",
+      "skills": {
+        "tastemaker": [
+          "tastemaker",
+          "ideagram"
+        ],
+        "elaya": [
+          "landing-page-design"
+        ],
+        "mengto": [
+          "video-to-superprompt",
+          "stitched-full-page-capture",
+          "html-to-interaction-prompts",
+          "generate-reference-inspired-brand-worlds",
+          "audit-reference-originality",
+          "build-awwwards-quality-sites",
+          "design-first-ui-prompting"
+        ]
+      }
+    },
+    "craft-interface": {
+      "description": "Phase 4: interface craft and review. Routed by better-interface.",
+      "skills": {
+        "jakubkrehel": [
+          "better-interface",
+          "better-ui",
+          "better-typography",
+          "better-colors",
+          "better-layout",
+          "better-accessibility",
+          "better-writing",
+          "interface-review",
+          "variant",
+          "break",
+          "explain-interface"
+        ]
+      }
+    },
+    "craft-motion": {
+      "description": "Phase 5: motion, scroll choreography, animation review.",
+      "skills": {
+        "emilkowalski": [
+          "animate",
+          "improve-animations",
+          "review-animations",
+          "find-animation-opportunities",
+          "animation-vocabulary",
+          "apple-design",
+          "emil-design-eng",
+          "prototype",
+          "pick-ui-library"
+        ],
+        "mengto": [
+          "cinematic-gsap-lenis-motion-system",
+          "cinematic-scroll-storytelling",
+          "gsap",
+          "scroll-scrubbed-visual-sequence",
+          "scroll-scrubbed-word-reveal",
+          "masked-reveal",
+          "scroll-progress-timeline",
+          "animation-systems"
+        ]
+      }
+    },
+    "craft-3d": {
+      "description": "Phase 6: WebGL / Three.js scenes and 3D scroll worlds.",
+      "skills": {
+        "mengto": [
+          "threejs",
+          "build-threejs-scroll-worlds",
+          "webgl-landing-steering",
+          "optimize-threejs-games"
+        ]
+      }
+    },
+    "craft-ship": {
+      "description": "Phase 7-8: performance, QA, release.",
+      "skills": {
+        "mengto": [
+          "optimize-web-animations",
+          "browser-video-recording",
+          "publish-project-to-github"
+        ],
+        "designer": [
+          "design-qa-checklist",
+          "accessibility-audit"
+        ]
+      }
+    }
+  },
+  "library": {
+    "_comment": "Everything not in core is vendored here as reference material, NOT as auto-triggering skills.",
+    "strip_dirs": [
+      "demo",
+      "demos",
+      "assets",
+      ".github",
+      "screenshots",
+      "images",
+      "video"
+    ],
+    "max_file_bytes": 262144
+  },
+  "authored": {
+    "pipeline-core": [
+      "site-pipeline",
+      "pipeline-library"
+    ]
+  },
+  "_notes": {
+    "scrollcraft": "github.com/mouki-ai/chatgpt-scrollcraft @1eb8f930 carries no LICENSE file, so it is referenced by the orchestrator, never copied into this repo. Install it separately."
+  }
+}

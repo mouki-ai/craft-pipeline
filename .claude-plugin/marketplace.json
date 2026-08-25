@@ -1,0 +1,42 @@
+{
+  "name": "craft-pipeline",
+  "owner": {
+    "name": "Dart"
+  },
+  "metadata": {
+    "description": "Cinematic site pipeline: one orchestrator plus curated design, motion and 3D skills.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "pipeline-core",
+      "source": "./plugins/pipeline-core",
+      "description": "The orchestrator. Owns the phases, the gates and the routing table."
+    },
+    {
+      "name": "craft-direction",
+      "source": "./plugins/craft-direction",
+      "description": "Phase 2: taste, art direction, reference intake."
+    },
+    {
+      "name": "craft-interface",
+      "source": "./plugins/craft-interface",
+      "description": "Phase 4: interface craft and review. Routed by better-interface."
+    },
+    {
+      "name": "craft-motion",
+      "source": "./plugins/craft-motion",
+      "description": "Phase 5: motion, scroll choreography, animation review."
+    },
+    {
+      "name": "craft-3d",
+      "source": "./plugins/craft-3d",
+      "description": "Phase 6: WebGL / Three.js scenes and 3D scroll worlds."
+    },
+    {
+      "name": "craft-ship",
+      "source": "./plugins/craft-ship",
+      "description": "Phase 7-8: performance, QA, release."
+    }
+  ]
+}

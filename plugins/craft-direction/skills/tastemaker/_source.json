@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/codeswithroh/tastemaker",
+  "commit": "45313ce9f60971134704a17f7b1a64c30909c240",
+  "license": "MIT",
+  "holder": "codeswithroh",
+  "path": "skills/tastemaker"
+}
