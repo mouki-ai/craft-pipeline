@@ -1,0 +1,5 @@
+# name	phase	tags	trigger	path
+build-threejs-scroll-worlds	6	scroll,3d,copy,landing,research,game	Build rich, scroll-controlled real-time Three.js experiences as one persistent 3D world whose camera, lighting…	library/mengto/build-threejs-scroll-worlds/SKILL.md
+optimize-threejs-games	6	motion,3d,perf,game	Profile, diagnose, and improve Three.js or WebGL game performance without regressing gameplay	library/mengto/optimize-threejs-games/SKILL.md
+threejs	6	3d,perf,media	Use when building or debugging interactive 3D scenes on the web with Three.js (scene/camera/renderer, lights/m…	library/mengto/threejs/SKILL.md
+webgl-landing-steering	6	3d,perf,landing	Use when creating or refining WebGL-heavy landing pages and you need to steer toward a specific visual outcome…	library/mengto/webgl-landing-steering/SKILL.md

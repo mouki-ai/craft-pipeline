@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Vendor upstream agent skills into this repo.
+"""Vendor upstream agent skills and build the lookup catalog.
 
-Reads scripts/sources.json, fetches each upstream repo at its pinned commit into
-.cache/, then lays the skills out in two tiers:
+Reads scripts/sources.json, fetches each upstream at its pinned commit into
+.cache/, then builds ONE plugin:
 
-  plugins/<plugin>/skills/<name>/   curated core, auto-discoverable by the agent
-  library/<upstream>/<name>/        everything else, read on demand by the pipeline
+  plugins/pipeline-core/skills/       the router (authored here) - the only registered skill
+  plugins/pipeline-core/library/      every vendored skill, read on demand, never auto-loaded
+  plugins/pipeline-core/catalog/      one grep-able line per skill, so the router can choose
+                                      without reading anything
+  plugins/pipeline-core/bin/          find-skill, the lookup command
 
-Heavy demo folders and large binaries are stripped so a clone stays small.
-Re-run after bumping a commit in sources.json. Idempotent: it rebuilds both trees.
+Re-run after bumping a commit in sources.json. Idempotent.
 """
 import json, os, re, shutil, subprocess, sys
 from pathlib import Path
@@ -18,6 +20,29 @@ CACHE = ROOT / ".cache"
 CFG = json.loads((ROOT / "scripts" / "sources.json").read_text())
 STRIP = set(CFG["library"]["strip_dirs"])
 MAXB = CFG["library"]["max_file_bytes"]
+PLUGIN = ROOT / "plugins" / "pipeline-core"
+
+# tag vocabulary: tag -> regexes matched against "name description"
+TAGS = {
+    "motion": r"animat|motion|easing|transition|micro-interaction",
+    "scroll": r"scroll|lenis|scrolltrigger|pinned|parallax",
+    "3d": r"three\.?js|webgl|webgpu|shader|3d |mesh|globe",
+    "type": r"typograph|typeface|font|type scale|readab|measure",
+    "color": r"colou?r|palette|contrast|gradient|dark mode|theming",
+    "layout": r"layout|grid|spacing|composition|hierarch|responsive",
+    "copy": r"copy|writing|microcopy|content|ux writing|narrative",
+    "a11y": r"accessib|wcag|screen reader|keyboard|focus state|reduced motion",
+    "review": r"review|critique|audit|heuristic|qa|verify|test",
+    "perf": r"performance|optimi[sz]|profil|frame|memory|budget",
+    "style": r"design system|visual system|aesthetic|brand|glass|dither|skeuomorph|editorial|minimal",
+    "landing": r"landing|hero|marketing page|pricing page|conversion",
+    "media": r"video|image|photo|render|capture|screenshot|audio|tts",
+    "research": r"research|interview|persona|journey|survey|usability|card sort",
+    "system": r"token|component spec|pattern librar|naming|governance|documentation",
+    "game": r"game|enemy|combat|inventory|level|rpg|fog of war",
+    "ship": r"deploy|publish|release|changelog|github",
+    "effect": r"particle|laser|blur|glow|marquee|cursor|reveal|ripple|leaves|orb",
+}
 
 
 def sh(*args, cwd=None):
@@ -48,13 +73,8 @@ def frontmatter(p: Path):
             " ".join(desc.group(1).split()).strip('">') if desc else "")
 
 
-def discover(repo: Path, single=False):
-    """name -> (skill_dir, description). For single-skill repos the root is the skill."""
+def discover(repo: Path):
     out = {}
-    if single:
-        n, d = frontmatter(repo / "SKILL.md")
-        out[n] = (repo, d)
-        return out
     for sk in sorted(repo.rglob("SKILL.md")):
         if ".git" in sk.relative_to(repo).parts:
             continue
@@ -67,23 +87,27 @@ def copy_skill(src: Path, dst: Path, meta: dict):
     if dst.exists():
         shutil.rmtree(dst)
     dst.mkdir(parents=True)
-    kept, skipped = 0, 0
     for p in src.rglob("*"):
         rel = p.relative_to(src)
         if any(part in STRIP or part == ".git" for part in rel.parts):
-            skipped += 1
             continue
-        if p.is_dir():
+        if p.is_dir() or p.stat().st_size > MAXB:
             continue
-        if p.stat().st_size > MAXB:
-            skipped += 1
-            continue
-        target = dst / rel
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(p, target)
-        kept += 1
+        (dst / rel).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(p, dst / rel)
     (dst / "_source.json").write_text(json.dumps(meta, indent=2) + "\n")
-    return kept, skipped
+
+
+def tags_for(name, desc):
+    hay = f"{name} {desc}".lower()
+    return [t for t, rx in TAGS.items() if re.search(rx, hay)] or ["misc"]
+
+
+def trigger_of(desc):
+    """First clause of the description, trimmed to something a grep result can show."""
+    d = re.sub(r"^(Use when|Use this skill when|Create|Build|Apply|Design)\b", r"\1", desc)
+    d = d.split(". ")[0]
+    return (d[:110] + "…") if len(d) > 110 else d
 
 
 def main():
@@ -92,91 +116,72 @@ def main():
     for u in CFG["upstream"]:
         path = fetch(u)
         repos[u["id"]] = u
-        skills[u["id"]] = discover(path, u.get("single_skill", False))
+        skills[u["id"]] = discover(path)
         print(f"  {u['id']}: {len(skills[u['id']])} skills @ {u['commit'][:8]}")
 
-    # which (upstream, name) pairs are claimed by the core tier
-    claimed, plugins = set(), []
-    for plug, spec in CFG["core"].items():
-        for uid, names in spec["skills"].items():
+    phase_of = {}
+    for ph, spec in CFG["phases"].items():
+        for uid, names in spec["owners"].items():
             for n in names:
-                real = list(skills[uid])[0] if n == "__single__" else n
-                claimed.add((uid, real))
+                phase_of[(uid, n)] = ph
 
-    LIB = ROOT / "plugins" / "pipeline-core" / "library"
     if (ROOT / "plugins").exists():
         shutil.rmtree(ROOT / "plugins")
+    (PLUGIN / ".claude-plugin").mkdir(parents=True)
+    (PLUGIN / "skills").mkdir()
+    (PLUGIN / "catalog" / "by-phase").mkdir(parents=True)
 
-    print("\nvendoring core → plugins/")
-    for plug, spec in CFG["core"].items():
-        pdir = ROOT / "plugins" / plug
-        (pdir / "skills").mkdir(parents=True, exist_ok=True)
-        listed = []
-        for uid, names in spec["skills"].items():
-            for n in names:
-                real = list(skills[uid])[0] if n == "__single__" else n
-                if real not in skills[uid]:
-                    print(f"  !! missing {uid}/{real}", file=sys.stderr)
-                    continue
-                src, desc = skills[uid][real]
-                u = repos[uid]
-                meta = {"upstream": u["repo"], "commit": u["commit"], "license": u["license"],
-                        "holder": u["holder"], "path": str(src.relative_to(CACHE / uid)) or "."}
-                copy_skill(src, pdir / "skills" / real, meta)
-                listed.append((real, uid, desc))
-        (pdir / ".claude-plugin").mkdir(exist_ok=True)
-        (pdir / ".claude-plugin" / "plugin.json").write_text(json.dumps({
-            "name": plug, "description": spec["description"], "version": "0.1.0",
-            "author": {"name": "Dart"}}, indent=2) + "\n")
-        for a in CFG.get("authored", {}).get(plug, []):
-            asrc = ROOT / "authored" / plug / a
-            adst = pdir / "skills" / a
-            if asrc.exists():
-                shutil.copytree(asrc, adst)
-                listed.append((a, "authored", frontmatter(asrc / "SKILL.md")[1]))
-        rows = "\n".join(f"| `{n}` | {u} | {d[:110]} |" for n, u, d in sorted(listed))
-        (pdir / "README.md").write_text(
-            f"# {plug}\n\n{spec['description']}\n\n"
-            f"| Skill | Upstream | What it does |\n|---|---|---|\n{rows}\n")
-        plugins.append({"name": plug, "source": f"./plugins/{plug}", "description": spec["description"]})
-        print(f"  {plug}: {len(listed)} skills")
+    reg = CFG["registered"]["pipeline-core"]
+    for a in reg["authored"]:
+        shutil.copytree(ROOT / "authored" / "pipeline-core" / a, PLUGIN / "skills" / a)
+    if (ROOT / "authored" / "pipeline-core" / "bin").exists():
+        shutil.copytree(ROOT / "authored" / "pipeline-core" / "bin", PLUGIN / "bin")
+        for f in (PLUGIN / "bin").iterdir():
+            f.chmod(0o755)
 
-    print("\nvendoring the rest → plugins/pipeline-core/library/")
-    index, total = {}, 0
+    print("\nvendoring → library/ and building catalog/")
+    rows, total = [], 0
     for uid, table in skills.items():
         for name, (src, desc) in sorted(table.items()):
-            if (uid, name) in claimed:
-                continue
             u = repos[uid]
-            meta = {"upstream": u["repo"], "commit": u["commit"], "license": u["license"],
-                    "holder": u["holder"], "path": str(src.relative_to(CACHE / uid))}
-            copy_skill(src, LIB / uid / name, meta)
-            index.setdefault(uid, []).append((name, desc))
+            copy_skill(src, PLUGIN / "library" / uid / name, {
+                "upstream": u["repo"], "commit": u["commit"], "license": u["license"],
+                "holder": u["holder"], "path": str(src.relative_to(CACHE / uid))})
+            rows.append({"name": name, "phase": phase_of.get((uid, name), "-"),
+                         "tags": ",".join(tags_for(name, desc)), "trigger": trigger_of(desc),
+                         "path": f"library/{uid}/{name}/SKILL.md"})
             total += 1
-        if uid in index:
-            print(f"  {uid}: {len(index[uid])}")
+        print(f"  {uid}: {len(table)}")
 
-    lines = ["# Library index", "",
-             f"{total} reference skills, vendored but **not** auto-loaded. The pipeline reads them by",
-             "path when a phase calls for one; you can also point the agent at any file directly:",
-             "", "```", "Read library/mengto/falling-leaves/SKILL.md and apply it to the hero.", "```", ""]
-    for uid in sorted(index):
-        u = repos[uid]
-        lines += [f"## {uid} — [{u['repo'].split('github.com/')[-1]}]({u['repo']}) ({u['license']})", ""]
-        lines += [f"- **{n}** — `{uid}/{n}/SKILL.md` — {d[:150]}" for n, d in index[uid]]
-        lines += [""]
-    (LIB / "INDEX.md").write_text("\n".join(lines))
+    rows.sort(key=lambda r: (r["phase"] == "-", r["phase"], r["name"]))
+    head = "# name\tphase\ttags\ttrigger\tpath\n"
+    (PLUGIN / "catalog" / "index.tsv").write_text(
+        head + "".join(f"{r['name']}\t{r['phase']}\t{r['tags']}\t{r['trigger']}\t{r['path']}\n" for r in rows))
+    for ph, spec in sorted(CFG["phases"].items()):
+        sel = [r for r in rows if r["phase"] == ph]
+        (PLUGIN / "catalog" / "by-phase" / f"{ph}-{spec['title'].lower().replace(' ', '-').replace('&', 'and')}.tsv").write_text(
+            head + "".join(f"{r['name']}\t{r['phase']}\t{r['tags']}\t{r['trigger']}\t{r['path']}\n" for r in sel))
+    counts = {}
+    for r in rows:
+        for t in r["tags"].split(","):
+            counts[t] = counts.get(t, 0) + 1
+    (PLUGIN / "catalog" / "tags.txt").write_text(
+        "\n".join(f"{t}\t{c}" for t, c in sorted(counts.items(), key=lambda x: -x[1])) + "\n")
 
+    (PLUGIN / ".claude-plugin" / "plugin.json").write_text(json.dumps({
+        "name": "pipeline-core", "description": reg["description"], "version": "0.2.0",
+        "author": {"name": "Dart"}}, indent=2) + "\n")
     (ROOT / ".claude-plugin").mkdir(exist_ok=True)
     (ROOT / ".claude-plugin" / "marketplace.json").write_text(json.dumps({
-        "name": "craft-pipeline",
-        "owner": {"name": "Dart"},
-        "metadata": {"description": "Cinematic site pipeline: one orchestrator plus curated design, motion and 3D skills.",
-                     "version": "0.1.0"},
-        "plugins": plugins}, indent=2) + "\n")
+        "name": "craft-pipeline", "owner": {"name": "Dart"},
+        "metadata": {"description": "One always-on router over 268 vendored design, motion and 3D skills.",
+                     "version": "0.2.0"},
+        "plugins": [{"name": "pipeline-core", "source": "./plugins/pipeline-core",
+                     "description": reg["description"]}]}, indent=2) + "\n")
 
-    print(f"\ncore: {sum(len(s['skills'][u]) for s in CFG['core'].values() for u in s['skills'])} skills, "
-          f"library: {total} skills")
+    idx_tokens = (PLUGIN / "catalog" / "index.tsv").stat().st_size // 4
+    print(f"\nregistered skills: {len(reg['authored'])}   library: {total}")
+    print(f"catalog/index.tsv: ~{idx_tokens} tokens if ever read whole (the router greps it instead)")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,269 @@
+# name	phase	tags	trigger	path
+audit-reference-originality	2	motion,layout,copy,review,style,media	Audit a website or digital experience against its supplied source references for originality and plagiarism ri…	library/mengto/audit-reference-originality/SKILL.md
+build-awwwards-quality-sites	2	motion,scroll,3d,a11y,perf,style,landing,media	Art-direct and implement distinctive, motion-rich marketing, editorial, portfolio, and landing websites with o…	library/mengto/build-awwwards-quality-sites/SKILL.md
+design-first-ui-prompting	2	type,layout	Use when you need design-first, spec-driven, skimmable prompts for UI generation	library/mengto/design-first-ui-prompting/SKILL.md
+generate-reference-inspired-brand-worlds	2	copy,style,media	Generate multiple original brand campaign worlds from a supplied visual reference while controlling how close …	library/mengto/generate-reference-inspired-brand-worlds/SKILL.md
+html-to-interaction-prompts	2	motion,media	Convert a supplied HTML page or generated HTML reference into a screenshot-backed article containing multiple …	library/mengto/html-to-interaction-prompts/SKILL.md
+ideagram	2	color,style,landing	Turn a concept, feature description, blog post, or pitch into a single beautiful, on-brand illustration by mat…	library/tastemaker/ideagram/SKILL.md
+landing-page-design	2	motion,type,color,layout,copy,review,style,landing,system	Complete system for building high converting landing pages: intake questions, page structure, layout selection…	library/elaya/landing-page-design/SKILL.md
+stitched-full-page-capture	2	motion,scroll,3d,copy,perf,media,effect	Capture or repair reliable full-page screenshots for lazy-loaded, scroll-animated, Framer, WebGL/canvas, or re…	library/mengto/stitched-full-page-capture/SKILL.md
+tastemaker	2	review,style,landing,media	Generate genuinely beautiful, on-brand UI instead of generic "AI slop" — use whenever the user asks to build, …	library/tastemaker/tastemaker/SKILL.md
+video-to-superprompt	2	motion,scroll,3d,type,color,media	Turn a reference video into a super detailed recreation or inspiration prompt	library/mengto/video-to-superprompt/SKILL.md
+better-accessibility	4	motion,a11y,review	Accessibility engineering for product interfaces	library/jakubkrehel/better-accessibility/SKILL.md
+better-colors	4	color,review,style,landing,system	Color systems for digital products	library/jakubkrehel/better-colors/SKILL.md
+better-interface	4	review	- Cross-discipline interface review	library/jakubkrehel/better-interface/SKILL.md
+better-layout	4	layout,review	Layout structure for web interfaces	library/jakubkrehel/better-layout/SKILL.md
+better-typography	4	type,layout	Web typography	library/jakubkrehel/better-typography/SKILL.md
+better-ui	4	motion,media	Design engineering principles for making interfaces feel polished	library/jakubkrehel/better-ui/SKILL.md
+better-writing	4	copy,review	- UX writing and interface copy	library/jakubkrehel/better-writing/SKILL.md
+break	4	media	Answers "does this survive?" for one component	library/jakubkrehel/break/SKILL.md
+explain-interface	4	media	Answers "how was this built?" about an interface	library/jakubkrehel/explain-interface/SKILL.md
+interface-review	4	review	- Interface review of a change rather than a screen: uncommitted work, the current branch, or a pull request	library/jakubkrehel/interface-review/SKILL.md
+variant	4	misc	Answers "which of these?" rather than "is this right?"	library/jakubkrehel/variant/SKILL.md
+animate	5	motion,review	Build an animation from scratch, making the decisions in the order that determines whether it feels right — sh…	library/emilkowalski/animate/SKILL.md
+animation-systems	5	motion,scroll,a11y,perf	Use when designing or implementing product-grade web motion like Stripe, Linear, Apple, and Vercel	library/mengto/animation-systems/SKILL.md
+animation-vocabulary	5	motion,scroll,system	Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term…	library/emilkowalski/animation-vocabulary/SKILL.md
+apple-design	5	motion,type,review	Apple's approach to interface design and fluid, physical motion, translated for the web	library/emilkowalski/apple-design/SKILL.md
+cinematic-gsap-lenis-motion-system	5	motion,scroll,style,effect	Create premium cinematic web motion systems with GSAP, ScrollTrigger, and Lenis	library/mengto/cinematic-gsap-lenis-motion-system/SKILL.md
+cinematic-scroll-storytelling	5	motion,scroll,type,style,landing,effect	Create cinematic scroll-driven landing pages with Lenis smooth scrolling, GSAP ScrollTrigger, scroll-linked pr…	library/mengto/cinematic-scroll-storytelling/SKILL.md
+emil-design-eng	5	motion	This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the inv…	library/emilkowalski/emil-design-eng/SKILL.md
+find-animation-opportunities	5	motion,review	Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't	library/emilkowalski/find-animation-opportunities/SKILL.md
+gsap	5	motion,scroll,perf	Use when you need to add or debug professional web animations with GSAP (timelines, ScrollTrigger, stagger, tr…	library/mengto/gsap/SKILL.md
+improve-animations	5	motion,review,research	Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and…	library/emilkowalski/improve-animations/SKILL.md
+masked-reveal	5	scroll,copy,style,landing,effect	Create masked staggered word reveals on scroll with GSAP ScrollTrigger	library/mengto/masked-reveal/SKILL.md
+pick-ui-library	5	misc	Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, chart…	library/emilkowalski/pick-ui-library/SKILL.md
+prototype	5	media	Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you…	library/emilkowalski/prototype/SKILL.md
+review-animations	5	motion,review	Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering phi…	library/emilkowalski/review-animations/SKILL.md
+scroll-progress-timeline	5	motion,scroll,layout,copy	Turn any ordered process into a data-driven vertical or horizontal scroll story with a base line, progress fil…	library/mengto/scroll-progress-timeline/SKILL.md
+scroll-scrubbed-visual-sequence	5	scroll,landing,media	Build reversible scroll-controlled visual transformations with a pinned or sticky stage, normalized progress, …	library/mengto/scroll-scrubbed-visual-sequence/SKILL.md
+scroll-scrubbed-word-reveal	5	motion,scroll,type,layout,style,effect	Reveal marked-up text word by word as scroll progress advances, while preserving semantic inline links, emphas…	library/mengto/scroll-scrubbed-word-reveal/SKILL.md
+build-threejs-scroll-worlds	6	scroll,3d,copy,landing,research,game	Build rich, scroll-controlled real-time Three.js experiences as one persistent 3D world whose camera, lighting…	library/mengto/build-threejs-scroll-worlds/SKILL.md
+optimize-threejs-games	6	motion,3d,perf,game	Profile, diagnose, and improve Three.js or WebGL game performance without regressing gameplay	library/mengto/optimize-threejs-games/SKILL.md
+threejs	6	3d,perf,media	Use when building or debugging interactive 3D scenes on the web with Three.js (scene/camera/renderer, lights/m…	library/mengto/threejs/SKILL.md
+webgl-landing-steering	6	3d,perf,landing	Use when creating or refining WebGL-heavy landing pages and you need to steer toward a specific visual outcome…	library/mengto/webgl-landing-steering/SKILL.md
+audit-verify-explain-grade-5	7	review	Audit work, verify claims with concrete evidence, and explain the result in simple grade-5 language	library/mengto/audit-verify-explain-grade-5/SKILL.md
+iterate-until-verified	7	review	Apply a prompt-agnostic execution and verification loop to any substantial task while preserving the original …	library/mengto/iterate-until-verified/SKILL.md
+accessibility-audit	8	a11y,review	Audit an existing interface against WCAG, producing findings with severity ratings and remediation steps	library/designer/accessibility-audit/SKILL.md
+browser-video-recording	8	media,effect	Create polished 60 fps 4:3 4K browser screen-recording style videos from Codex in-app browser captures, with b…	library/mengto/browser-video-recording/SKILL.md
+design-qa-checklist	8	review	Build a QA checklist for verifying that a build matches the design	library/designer/design-qa-checklist/SKILL.md
+optimize-web-animations	8	motion,scroll,3d,review,perf,effect	Profile, audit, and optimize frontend page performance with emphasis on animation work, memory-leak risks, lon…	library/mengto/optimize-web-animations/SKILL.md
+publish-project-to-github	8	review,ship	Package a finished local project into an intentional GitHub repository, create a strong README and visual prev…	library/mengto/publish-project-to-github/SKILL.md
+a-b-test-design	-	type,review	Design an A/B experiment — hypothesis, variants, primary metric, and sample size	library/designer/a-b-test-design/SKILL.md
+accessibility-test-plan	-	a11y,review	Plan accessibility testing — assistive technologies, participant criteria, WCAG coverage, and session protocol	library/designer/accessibility-test-plan/SKILL.md
+add-mouse-driven-orbit	-	scroll,3d,layout,landing,effect	Add restrained mouse-driven orbit and parallax depth to a Three.js hero by damping one pointer target and spli…	library/mengto/add-mouse-driven-orbit/SKILL.md
+add-shader-cursor-trail	-	3d,layout,a11y,perf,landing,effect	Add the Shaders WebGPU mouse effect used for the Tidal Commons hero: a white twinkling halftone cursor trail d…	library/mengto/add-shader-cursor-trail/SKILL.md
+aesthetic-usability	-	motion,review,style,research	Apply the Aesthetic-Usability Effect — polished, consistent interfaces are perceived as more usable and forgiv…	library/designer/aesthetic-usability/SKILL.md
+affinity-diagram	-	research	Cluster many qualitative data points into themes and insight statements	library/designer/affinity-diagram/SKILL.md
+agency-grid-layout-minimal	-	type,layout,style,media	Create a minimal agency design system with a disciplined editorial grid, oversized typography, quiet uppercase…	library/mengto/agency-grid-layout-minimal/SKILL.md
+ambient-section-particles	-	motion,layout,copy,style,effect	Add a restrained particle atmosphere inside one section with configurable shapes, density, gravity, wind, sway…	library/mengto/ambient-section-particles/SKILL.md
+animate-expo	-	motion	Build animations in React Native and Expo, making the decisions in the order that determines whether they feel…	library/emilkowalski/animate-expo/SKILL.md
+animation-on-scroll	-	motion,scroll,perf,effect	Create an on-scroll animation trigger using IntersectionObserver with Tailwind-friendly animation classes and …	library/mengto/animation-on-scroll/SKILL.md
+animation-principles	-	motion,system	Apply animation principles — easing, staging, follow-through — to one specific UI motion	library/designer/animation-principles/SKILL.md
+article-prompts-to-skills	-	review,media	Convert an article, tutorial, or prompt pack into focused reusable AgentSkills, one independent capability per…	library/mengto/article-prompts-to-skills/SKILL.md
+ask-sonner	-	color	Guide to Sonner, the React toast library — install and wire up the Toaster, pick the right toast() call, promi…	library/emilkowalski/ask-sonner/SKILL.md
+atmosphere-background	-	effect	Create a dark atmospheric background with drifting vertical light folds, screen-blended glow, and a concentrat…	library/mengto/atmosphere-background/SKILL.md
+aura-asset-images	-	media	Use when you need high-quality stock-style images from Aura Assets (aura.build/assets) similar to Unsplash for…	library/mengto/aura-asset-images/SKILL.md
+author-game-levels	-	3d,type,game	Author or revise readable, flat-world Three.js game levels	library/mengto/author-game-levels/SKILL.md
+background-grid-webgl	-	scroll,3d,layout,effect	Create a perspective WebGL background grid with fading lines, subtle particle haze, slow forward drift, and ge…	library/mengto/background-grid-webgl/SKILL.md
+beam-glow-states	-	motion,layout,a11y,perf,effect	Create React loading, processing, selected, current, focus, and pressed states with the border-beam package's …	library/mengto/beam-glow-states/SKILL.md
+beautiful-article	-	media	把用户提供的素材（网页 URL / PDF / DOCX / Markdown / 纯文本 / 截图 / 粘贴材料）编辑、设计成一篇美丽的、可离线打开和分享的**单文件 HTML 网页文章**。基于 reacticle …	library/garden/beautiful-article/SKILL.md
+beautiful-shadows	-	color,landing	Apply exact Tailwind arbitrary shadow utilities for polished, layered neutral elevation	library/mengto/beautiful-shadows/SKILL.md
+blue-cloudy-clean-modern	-	type,style	Create a clean modern design system with a luminous blue sky atmosphere, soft drifting cloud light, minimal wh…	library/mengto/blue-cloudy-clean-modern/SKILL.md
+blue-laser-clean-glass-layout	-	layout,style,effect	Create a clean dark glass layout system with a thin blue laser atmosphere, frosted premium shells, and polishe…	library/mengto/blue-laser-clean-glass-layout/SKILL.md
+book-serif-index	-	perf,style	Create an archival book-reader design system with serif-led pages, mono index navigation, aged paper surfaces,…	library/mengto/book-serif-index/SKILL.md
+bright-green-tech-system-webgl	-	3d,layout,perf,style	Create a bright-green technical design system with structured split layouts, hard-framed dark surfaces, mono u…	library/mengto/bright-green-tech-system-webgl/SKILL.md
+build-daily-inspiration-sites	-	copy,style,landing,media	Turn a completed daily UI inspiration capture into exactly five original landing-page builds, one per separate…	library/mengto/build-daily-inspiration-sites/SKILL.md
+build-game-audio-feedback	-	3d,layout,a11y,perf,media,game	Design or implement responsive audio feedback for a Three.js or web game	library/mengto/build-game-audio-feedback/SKILL.md
+build-game-camera-controls	-	3d,review,game,effect	Implement or tune Three.js game cameras	library/mengto/build-game-camera-controls/SKILL.md
+build-game-changelog	-	layout,a11y,review,game,ship	Design, implement, backfill, audit, and release in-game changelogs with contiguous versioning, deployment prov…	library/mengto/build-game-changelog/SKILL.md
+build-game-inventory	-	review,game	Build or repair game inventory, loot, equipment, tooltips, drag-and-drop, persistence, and progression systems	library/mengto/build-game-inventory/SKILL.md
+build-game-map-editor	-	3d,review,game,ship	Build, extend, or audit production-linked browser map editors for Three.js and isometric games	library/mengto/build-game-map-editor/SKILL.md
+build-game-monster-system	-	motion,3d,review,game	Build, integrate, audit, or refactor rigged monsters for Three.js and web action games	library/mengto/build-game-monster-system/SKILL.md
+build-hybrid-game-assets	-	3d,review,perf,game	Plan, create, integrate, or audit a hybrid asset pipeline for a Three.js or web game	library/mengto/build-hybrid-game-assets/SKILL.md
+build-interactive-particle-trail	-	layout,a11y,effect	Build a cursor or touch particle interaction that emits by distance along the traveled segment into a recycled…	library/mengto/build-interactive-particle-trail/SKILL.md
+build-isometric-arpg	-	3d,copy,game	Build or extend a playable isometric action RPG in Three.js, React, or similar web technology	library/mengto/build-isometric-arpg/SKILL.md
+build-mobile-threejs-games	-	3d,layout,review,perf,game	Build, tune, or test a Three.js game for mobile web	library/mengto/build-mobile-threejs-games/SKILL.md
+build-rigged-game-assets	-	motion,3d,review,perf,game	Create, integrate, or audit production-ready rigged 3D characters and monsters with a main model, skeleton, an…	library/mengto/build-rigged-game-assets/SKILL.md
+build-threejs-enemy-systems	-	3d,copy,game	Build or refactor reusable, data-driven enemy archetype and moveset systems for Three.js action games	library/mengto/build-threejs-enemy-systems/SKILL.md
+build-vesperfall-review-assets	-	3d,review,game	Build truthful Vesperfall asset-library review pairs from transparent PNG references and live Three.js, FBX, o…	library/mengto/build-vesperfall-review-assets/SKILL.md
+build-wireframe-scan-reveal	-	3d,perf,research,effect	Reveal Three.js geometry with an expanding world-space scan whose wire cage leads the solid surface, then burn…	library/mengto/build-wireframe-scan-reveal/SKILL.md
+business-design	-	misc	Read financials, map competitive landscapes, and argue design decisions in the language of value	library/designer/business-design/SKILL.md
+card-sort-analysis	-	research	Analyse open or closed card sort results into a proposed grouping and label set	library/designer/card-sort-analysis/SKILL.md
+case-study	-	copy	Craft a portfolio case study with narrative arc, process evidence, and outcomes	library/designer/case-study/SKILL.md
+clean-minimal-beige-light-mode	-	color,layout,style	Create a clean minimal beige light-mode design system with warm neutral shells, quiet process grids, restraine…	library/mengto/clean-minimal-beige-light-mode/SKILL.md
+click-test-plan	-	review	Design first-click and click tests for findability and navigation	library/designer/click-test-plan/SKILL.md
+cobejs	-	3d,perf	Use when adding a lightweight interactive globe with cobe (canvas setup, markers, interaction, performance, in…	library/mengto/cobejs/SKILL.md
+color-system	-	color,style,system	Build a product colour system — tonal scales, semantic roles, and contrast compliance	library/designer/color-system/SKILL.md
+company-logos	-	misc	Use Iconify Simple Icons logos (64x64) instead of text logos.	library/mengto/company-logos/SKILL.md
+competitive-analysis	-	misc	Compare UX patterns, features, strengths, and gaps across rival products	library/designer/competitive-analysis/SKILL.md
+component-spec	-	a11y,system	Specify one component — props, states, variants, accessibility, and usage rules	library/designer/component-spec/SKILL.md
+container-lines	-	type,layout,perf,style	Add vertical container-size guide lines with mini corner squares for precise, structured web layouts	library/mengto/container-lines/SKILL.md
+content-strategy	-	layout,copy	Define what content a product needs, how it is structured, and who owns it	library/designer/content-strategy/SKILL.md
+conversational-ux	-	research	Design voice and conversational interfaces — dialog flows, error recovery, and persona	library/designer/conversational-ux/SKILL.md
+corner-diagonals	-	misc	Apply diagonal-cut corners and chamfered edges to buttons, cards, panels, and container shells	library/mengto/corner-diagonals/SKILL.md
+corner-lasers	-	layout,effect	Create a corner-anchored laser composition with thin beams, a bright emitter node, bloom, and atmospheric glow…	library/mengto/corner-lasers/SKILL.md
+create-game-vfx	-	motion,3d,type,perf,game,effect	Create readable, performance-safe Three.js game visual effects	library/mengto/create-game-vfx/SKILL.md
+critique-affordance	-	review,media	Critique a rendered screen's affordances — what looks clickable, state visibility, CTA clarity, and action dis…	library/designer/critique-affordance/SKILL.md
+critique-brand-consistency	-	review,style,media,system	Critique a rendered screen against mood.md, voice.md, and tokens.md	library/designer/critique-brand-consistency/SKILL.md
+critique-color	-	color,a11y,review,media	Critique a rendered screen's colour — contrast ratios, palette coherence, and semantic meaning	library/designer/critique-color/SKILL.md
+critique-composition	-	layout,review,media	Critique a rendered screen's composition — balance, whitespace, rhythm, and gestalt grouping	library/designer/critique-composition/SKILL.md
+critique-information-density	-	copy,review,media	Critique a rendered screen's density — cognitive load, content prioritisation, scanning patterns, and progress…	library/designer/critique-information-density/SKILL.md
+critique-typography	-	type,review,media,system	Critique a rendered screen's typography — scale usage, readability, consistency, and token compliance	library/designer/critique-typography/SKILL.md
+critique-visual-hierarchy	-	layout,review,media	Critique a rendered screen's hierarchy — entry point, eye flow, weight distribution, and emphasis	library/designer/critique-visual-hierarchy/SKILL.md
+css-alpha-masking	-	color,media	Apply CSS alpha masking with linear-gradient for horizontal or vertical edge fades (mask-image and -webkit-mas…	library/mengto/css-alpha-masking/SKILL.md
+css-border-gradient	-	color,landing,effect	Apply subtle gradient-border treatments for premium web surfaces	library/mengto/css-border-gradient/SKILL.md
+daily-ui-inspiration-capture	-	motion,perf,landing,media	Create a recurring daily UI inspiration capture	library/mengto/daily-ui-inspiration-capture/SKILL.md
+dark-blue-contrasting-clean	-	color,perf,style,effect	Create a dark-blue clean design system with strong contrast, cobalt gradient feature blocks, crisp framed stru…	library/mengto/dark-blue-contrasting-clean/SKILL.md
+dark-glass-clean-layout	-	layout,style	Create a dark glass layout system with frosted premium shells, clean multi-column workspace structure, floatin…	library/mengto/dark-glass-clean-layout/SKILL.md
+dark-mode-design	-	color	Adapt an existing palette to dark mode — surface elevation, contrast rebalancing, and desaturation rules	library/designer/dark-mode-design/SKILL.md
+data-visualization	-	color,a11y	Select chart types and design data encodings — marks, axes, labels, and accessible chart styling	library/designer/data-visualization/SKILL.md
+design-action-combat	-	type,review,game	Design, implement, tune, or test readable tactical action combat for web games	library/mengto/design-action-combat/SKILL.md
+design-brief	-	misc	Write a project brief — problem space, constraints, audience, and success criteria	library/designer/design-brief/SKILL.md
+design-critique	-	review	Facilitate a structured team critique — framing, feedback rules, and actionable outcomes	library/designer/design-critique/SKILL.md
+design-debt-audit	-	a11y,review,system,game	Inventory and prioritise accumulated design inconsistencies across a product	library/designer/design-debt-audit/SKILL.md
+design-game-encounters	-	3d,layout,review,game	Design, implement, tune, or test Three.js action-game encounters	library/mengto/design-game-encounters/SKILL.md
+design-impact-reporting	-	misc	Communicate design's contribution to business and user outcomes in stakeholder language	library/designer/design-impact-reporting/SKILL.md
+design-negotiation	-	misc	Advocate for design quality, scope, and timeline with partners and leadership using evidence and shared goals	library/designer/design-negotiation/SKILL.md
+design-principles	-	misc	Define actionable principles that resolve trade-offs when the team disagrees	library/designer/design-principles/SKILL.md
+design-rationale	-	copy	Write rationale connecting decisions to user needs, business goals, and principles	library/designer/design-rationale/SKILL.md
+design-review-process	-	review	Establish review gates — criteria, checkpoints, and approval flow	library/designer/design-review-process/SKILL.md
+design-sprint-plan	-	review	Plan and facilitate a design sprint from challenge framing through prototype testing	library/designer/design-sprint-plan/SKILL.md
+design-system-adoption	-	style,system	Create adoption strategy and enablement materials to drive design system usage	library/designer/design-system-adoption/SKILL.md
+design-system-governance	-	system	Define how the system evolves — contribution model, versioning, deprecation, and change management	library/designer/design-system-governance/SKILL.md
+design-token	-	color,layout,review,style,system	Define and organise tokens for colour, spacing, type, and elevation with naming and usage rules	library/designer/design-token/SKILL.md
+design-token-audit	-	review,system	Audit token usage across a product for coverage, drift, and hard-coded values	library/designer/design-token-audit/SKILL.md
+diary-study-plan	-	review,perf,research	Design a diary study — prompts, cadence, duration, participant criteria, and analysis frame	library/designer/diary-study-plan/SKILL.md
+dither-background	-	copy,perf,style,landing	Create a dark monochrome procedural background with enlarged square pixels and visible Bayer-style ordered dit…	library/mengto/dither-background/SKILL.md
+dither-laser-dark-mode	-	color,style,effect	Create a dark premium design system that combines near-black surfaces, subtle ordered-dither texture, and a th…	library/mengto/dither-laser-dark-mode/SKILL.md
+documentary-brutalist-agency	-	scroll,type,layout,a11y,media	Create or redesign creative agency, production studio, architecture, culture, and portfolio websites with bill…	library/mengto/documentary-brutalist-agency/SKILL.md
+documentation-template	-	copy,system	Generate a reusable documentation scaffold for components, patterns, or guidelines	library/designer/documentation-template/SKILL.md
+doherty-threshold	-	perf	Apply the Doherty Threshold — keep system response under 400ms to preserve user flow	library/designer/doherty-threshold/SKILL.md
+editorial-portfolio-chapters	-	type,color,style,media,effect	Create or redesign creative-studio, agency, photographer, artist, and portfolio websites where project work le…	library/mengto/editorial-portfolio-chapters/SKILL.md
+editorial-service-booking	-	layout,style	Create or redesign appointment-based service websites for salons, barbers, spas, wellness studios, clinics, an…	library/mengto/editorial-service-booking/SKILL.md
+editorial-tech	-	color,layout,style	Blend editorial magazine composition with precision product-tech detailing using asymmetrical grids, cinematic…	library/mengto/editorial-tech/SKILL.md
+elevenlabs-tts	-	perf,media	Generate ElevenLabs text-to-speech audio from scripts or inline text using local voice profiles	library/mengto/elevenlabs-tts/SKILL.md
+empathy-map	-	research	Build a Says, Thinks, Does, Feels map for one user or segment	library/designer/empathy-map/SKILL.md
+error-handling-ux	-	copy	Design error prevention, detection, and recovery across a product — message content, placement, and escape rou…	library/designer/error-handling-ux/SKILL.md
+experience-map	-	research	Map the full ecosystem of touchpoints, channels, and relationships across a service	library/designer/experience-map/SKILL.md
+falling-leaves	-	motion,color,a11y,effect	Build falling leaves that read as leaves, with each one tumbling on its own axis so it presents a face, thins …	library/mengto/falling-leaves/SKILL.md
+feedback-patterns	-	misc	Design confirmations, status updates, and notifications that tell users an action registered	library/designer/feedback-patterns/SKILL.md
+fitts-law	-	media	Apply Fitts's Law — target acquisition time depends on size and distance	library/designer/fitts-law/SKILL.md
+form-design	-	misc	Design a form end to end — field order, grouping, validation, and completion	library/designer/form-design/SKILL.md
+framed-grid-layout	-	layout,perf,style	Create minimal framed grid layouts with thin visible boundary lines, L-shaped corner brackets, subtle diagonal…	library/mengto/framed-grid-layout/SKILL.md
+framed-tech-dark-border-gradient	-	color,layout,perf,style	Create a framed dark technical design system with border-gradient shells, asymmetrical grid panels, mono utili…	library/mengto/framed-tech-dark-border-gradient/SKILL.md
+funky-purple-container-tech	-	perf,style	Create a dark container-led technical design system with fuchsia-purple accents, layered rounded shells, crisp…	library/mengto/funky-purple-container-tech/SKILL.md
+gesture-patterns	-	misc	Design gesture interactions for touch and pointer — swipe, drag, long-press, and their discoverability	library/designer/gesture-patterns/SKILL.md
+glass-dark-mode-clock	-	layout,style	Create a dark glass design system with frosted shells, soft beam grids, circular clock-like calibration dials,…	library/mengto/glass-dark-mode-clock/SKILL.md
+glass-dark-ui	-	type,color,style,landing,effect	Build dark-mode glassmorphism interfaces with readable contrast, frosted surfaces, and gradient borders using …	library/mengto/glass-dark-ui/SKILL.md
+globe-gl	-	3d	Use when implementing globe.gl (Globe.GL) for 3D globe data visualization with WebGL/ThreeJS, including setup,…	library/mengto/globe-gl/SKILL.md
+globe-particles	-	3d,layout,media,effect	Create a globe-like 3D particle visualization with a dense luminous spherical core and thinner orbital ring or…	library/mengto/globe-particles/SKILL.md
+gooey-blob-system	-	motion,color,effect	Create a gooey blob system using SVG filters where multiple shapes merge into a single fluid form	library/mengto/gooey-blob-system/SKILL.md
+gpt-image-2	-	media	面向 GPT Image 2 的图像生成 / 编辑技能。可在 3 种环境下使用：(A) Garden 本地模式，通过 OpenAI 兼容接口直接出图并落盘；(B) Host-Native 模式，把本 Skill 当作提示…	library/garden/gpt-image-2/SKILL.md
+gsap-scrolltrigger-storytelling	-	motion,scroll,effect	Build cinematic sticky product storytelling with GSAP ScrollTrigger, progressive UI reveals, scroll-synced ani…	library/mengto/gsap-scrolltrigger-storytelling/SKILL.md
+handoff-spec	-	type,review	Write the implementation handoff — measurements, behaviours, assets, states, and edge cases	library/designer/handoff-spec/SKILL.md
+heuristic-evaluation	-	review	Run an expert review against Nielsen's heuristics and domain criteria, with severity ratings	library/designer/heuristic-evaluation/SKILL.md
+hicks-law	-	perf	Apply Hick's Law — decision time grows with the number of simultaneous choices	library/designer/hicks-law/SKILL.md
+high-contrast-skeuomorphic-clean	-	color,style	Create a high-contrast clean skeuomorphic design system with molded dark surfaces, crisp light separation, tac…	library/mengto/high-contrast-skeuomorphic-clean/SKILL.md
+icon-system	-	layout,system	Specify an icon system — grid, sizing, stroke weight, naming, categories, and implementation	library/designer/icon-system/SKILL.md
+illustration-style	-	color	Define an illustration style guide — visual language, colour usage, and application rules	library/designer/illustration-style/SKILL.md
+image-first-grid-layout	-	layout,copy,style,media	Create an image-led grid design system with full-bleed photography, structural guide lines, anchored content b…	library/mengto/image-first-grid-layout/SKILL.md
+implement-fog-of-war	-	3d,review,perf,game	Implement, tune, debug, or validate soft wall-aware fog of war and gameplay perception in Three.js action game…	library/mengto/implement-fog-of-war/SKILL.md
+information-architecture	-	layout,copy,research	Design content structure, hierarchy, labelling, and the navigation model	library/designer/information-architecture/SKILL.md
+interfaces-that-feel	-	motion,copy,review,style,research	Apply an emotional resonance lens to a UI that is technically correct but flat, prescribing changes at the cop…	library/designer/interfaces-that-feel/SKILL.md
+interview-script	-	research	Write a structured interview guide — warm-up, core exploration, and wrap-up	library/designer/interview-script/SKILL.md
+jakobs-law	-	misc	Apply Jakob's Law — users expect your product to work like the others they already use	library/designer/jakobs-law/SKILL.md
+jobs-to-be-done	-	motion,research	Map functional, emotional, and social jobs with outcome expectations	library/designer/jobs-to-be-done/SKILL.md
+journey-map	-	motion,review,research,game	Map one persona's end-to-end experience with stages, touchpoints, emotions, and pain points	library/designer/journey-map/SKILL.md
+kb-retriever	-	misc	面向本地知识库目录的检索和问答助手。核心流程：(1)分层索引导航 (2)遇到PDF/Excel时必须先读取references学习处理方法 (3)处理文件后再检索。按文件类型组合使用 grep、Read、pdfplumb…	library/garden/kb-retriever/SKILL.md
+landing-page	-	layout,copy,landing	Use when designing or rewriting a high-converting landing page (single-offer page) for SaaS/apps/services	library/mengto/landing-page/SKILL.md
+law-of-closure	-	misc	Apply the Law of Closure — the eye completes implied shapes from partial forms	library/designer/law-of-closure/SKILL.md
+law-of-common-region	-	layout	Apply the Law of Common Region — a shared container, background, or border groups elements regardless of spaci…	library/designer/law-of-common-region/SKILL.md
+law-of-continuity	-	copy	Apply the Law of Continuity — the eye follows alignment and unbroken paths	library/designer/law-of-continuity/SKILL.md
+law-of-figure-ground	-	misc	Apply the Law of Figure-Ground — establish which layer is foreground and actionable versus background	library/designer/law-of-figure-ground/SKILL.md
+law-of-proximity	-	layout	Apply the Law of Proximity — spatial closeness groups elements more strongly than any other cue	library/designer/law-of-proximity/SKILL.md
+law-of-similarity	-	color	Apply the Law of Similarity — shared colour, shape, or size signals that elements belong to one category	library/designer/law-of-similarity/SKILL.md
+layout-grid	-	layout	Define a responsive grid — columns, gutters, margins, and breakpoint behaviour	library/designer/layout-grid/SKILL.md
+light-mode-paper-technical	-	style	Create a light-mode technical design system with warm paper surfaces, dark outer framing, subtle diagonal text…	library/mengto/light-mode-paper-technical/SKILL.md
+liquid-metal-border	-	motion,3d,a11y,perf,effect	Add and tune animated liquid-metal WebGL borders with the React `metal-fx` package	library/mengto/liquid-metal-border/SKILL.md
+loading-states	-	copy,perf,effect	Design waiting experiences — spinners, skeletons, optimistic updates, and progressive reveal	library/designer/loading-states/SKILL.md
+localization-design	-	copy	Design for multiple languages, writing directions, and cultural contexts — text expansion, RTL mirroring, and …	library/designer/localization-design/SKILL.md
+marquee-loop	-	effect	Apply seamless infinite marquee loops using duplicated items.	library/mengto/marquee-loop/SKILL.md
+matterjs	-	scroll,media	Use when implementing 2D physics interactions with Matter.js, including Engine/World setup, Render/Runner conf…	library/mengto/matterjs/SKILL.md
+mesh-gradient-dark-blue-clean	-	motion,3d,color,perf,style,landing,media	Create a futuristic, premium, clean dark-blue mesh-gradient design system across background rendering, hero sh…	library/mengto/mesh-gradient-dark-blue-clean/SKILL.md
+metrics-definition	-	type	Define UX metrics and KPIs that connect design decisions to measurable outcomes	library/designer/metrics-definition/SKILL.md
+micro-interaction-spec	-	motion	Specify one micro-interaction completely — trigger, rules, feedback, loops, and modes	library/designer/micro-interaction-spec/SKILL.md
+millers-law	-	perf	Apply Miller's Law — chunk information into groups of about four to fit working memory	library/designer/millers-law/SKILL.md
+motion-system	-	motion,system	Define motion tokens — durations, easing vocabulary, and reduced-motion handling — for consistency product-wid…	library/designer/motion-system/SKILL.md
+naming-convention	-	system	Establish naming rules for components, tokens, and layers with patterns and worked examples	library/designer/naming-convention/SKILL.md
+navigation-patterns	-	layout,copy	Select and design a navigation pattern — tabs, drawer, hierarchy, or hub — matched to product structure and us…	library/designer/navigation-patterns/SKILL.md
+nested-container-clean-agency	-	color,style	Create a clean agency design system built from nested containers, with an outer editorial shell, inset dark fe…	library/mengto/nested-container-clean-agency/SKILL.md
+nested-container-frames	-	layout,perf,game	Create a container-in-container layout system using nested frames	library/mengto/nested-container-frames/SKILL.md
+north-star-vision	-	review	Articulate a long-horizon product vision that aligns teams and anchors strategy	library/designer/north-star-vision/SKILL.md
+number-details	-	misc	Add decorative 01, 02, 03 numeric detail markers.	library/mengto/number-details/SKILL.md
+onboarding-design	-	misc	Design the first-run experience — activation path, progressive disclosure, and time to first value	library/designer/onboarding-design/SKILL.md
+operational-enterprise-ai	-	layout,review,landing	Create or redesign enterprise AI, automation, security, and operations product pages that explain system bound…	library/mengto/operational-enterprise-ai/SKILL.md
+opportunity-framework	-	perf	Identify, score, and prioritise design opportunities against impact and effort	library/designer/opportunity-framework/SKILL.md
+orange-clean-paper-saas	-	style	Create a clean paper-toned SaaS design system with warm neutrals, orange accent signals, rounded premium forms…	library/mengto/orange-clean-paper-saas/SKILL.md
+pattern-library	-	misc	Structure a pattern entry — problem context, solution, usage examples, and related patterns	library/designer/pattern-library/SKILL.md
+peak-end-rule	-	misc	Apply the Peak-End Rule — a flow is remembered by its most intense moment and its last	library/designer/peak-end-rule/SKILL.md
+performance-profiling	-	type,perf	Guide performance profiling for Apple platform apps with Instruments, Xcode diagnostics, and MetricKit	library/mengto/performance-profiling/SKILL.md
+platform-conventions	-	layout	Design to iOS and Android conventions — what each OS mandates, where they diverge, and when to unify	library/designer/platform-conventions/SKILL.md
+pointer-trail-emitter	-	motion,layout,effect	Build a cursor trail whose spacing stays constant at any hand speed, by emitting motes per unit of distance tr…	library/mengto/pointer-trail-emitter/SKILL.md
+presentation-deck	-	copy	Structure a design presentation for a specific audience and decision	library/designer/presentation-deck/SKILL.md
+pricing-page	-	layout,copy,landing	Use when designing or rewriting a high-converting SaaS pricing page (structure, plan design, copywriting, SEO/…	library/mengto/pricing-page/SKILL.md
+product-proof-saas	-	landing	Create or redesign SaaS and AI product landing pages where a real workflow, interface, or deterministic demo i…	library/mengto/product-proof-saas/SKILL.md
+progressive-blur	-	color,effect	Create a layered CSS progressive blur (top or bottom) using multiple backdrop-filter masks for depth and softn…	library/mengto/progressive-blur/SKILL.md
+prototype-strategy	-	review	Choose prototype fidelity and method to match the design question and the decision at stake	library/designer/prototype-strategy/SKILL.md
+readable-measure	-	type	Set line length and measure for comfortable reading across type sizes and breakpoints	library/designer/readable-measure/SKILL.md
+research-repository	-	research	Build a repository that makes findings findable, reusable, and cumulative across teams	library/designer/research-repository/SKILL.md
+responsive-design	-	layout	Design layouts and interactions that adapt across screen sizes and input methods	library/designer/responsive-design/SKILL.md
+reveal-hover-effect	-	color,landing,media,effect	Build cursor-following spotlight reveals that expose a second aligned image through a soft radial mask	library/mengto/reveal-hover-effect/SKILL.md
+scroll-world-storytelling	-	motion,scroll,3d,type,copy,style,landing,media,research	Turn an article, case study, brand narrative, product journey, or long-form story into a cinematic scroll-driv…	library/mengto/scroll-world-storytelling/SKILL.md
+search-ux	-	misc	Design search — query input, zero results, refinement, and result presentation	library/designer/search-ux/SKILL.md
+serial-position-effect	-	misc	Apply the Serial Position Effect — first and last items in a sequence are recalled best	library/designer/serial-position-effect/SKILL.md
+service-blueprint	-	misc	Map service delivery across frontstage actions, backstage processes, and supporting systems	library/designer/service-blueprint/SKILL.md
+shaders-cursor-ripples	-	3d,layout,copy,style,landing,media,effect	Add cursor-following fluid WebGPU distortion over an existing image with the Shaders library's ImageTexture an…	library/mengto/shaders-cursor-ripples/SKILL.md
+ship-web-games	-	3d,review,game,ship	Package, deploy, and verify a playable Three.js or web game	library/mengto/ship-web-games/SKILL.md
+skeuomorphic-ui	-	color,style	Create skeuomorphic web UI surfaces with layered gradients, stacked inner and outer shadows, reflective gradie…	library/mengto/skeuomorphic-ui/SKILL.md
+solar-duotone-bold	-	misc	Use Iconify Solar Duotone Bold icon style.	library/mengto/solar-duotone-bold/SKILL.md
+spacing-system	-	layout,game	Create a spacing scale from a base unit with rules for when each step applies	library/designer/spacing-system/SKILL.md
+split-layout-technical	-	type,layout,perf,style	Create a technical split-screen design system with dual panels, fine frame lines, mono metadata, quiet editori…	library/mengto/split-layout-technical/SKILL.md
+staggered-word-reveal	-	motion,copy,style,landing,effect	Create subtle editorial word-by-word text reveal animations where each word fades and rises into place once it…	library/mengto/staggered-word-reveal/SKILL.md
+stakeholder-alignment	-	misc	Build alignment artifacts — responsibility matrices, decision rights, and communication plans	library/designer/stakeholder-alignment/SKILL.md
+state-machine	-	motion	Model component behaviour as explicit states, events, and transitions	library/designer/state-machine/SKILL.md
+summarize-interview	-	research	Turn one interview transcript into themes, supporting quotes, and action items	library/designer/summarize-interview/SKILL.md
+survey-design	-	type,review,research	Design unbiased survey instruments — question wording, scales, and sampling — to measure attitudes at scale	library/designer/survey-design/SKILL.md
+tailwindcss	-	type,color,layout	Use when designing/implementing UI with Tailwind CSS (layout, typography, responsive, theming, component patte…	library/mengto/tailwindcss/SKILL.md
+team-workflow	-	misc	Design the team's operating rhythm — task management, collaboration rituals, and tooling	library/designer/team-workflow/SKILL.md
+tech-green-dark-mode-modern	-	perf,style,effect	Create a modern dark-mode technical design system with matte-black surfaces, emerald signal accents, mono syst…	library/mengto/tech-green-dark-mode-modern/SKILL.md
+technical-wireframe-info-layout	-	3d,layout,perf,style	Create a monochrome technical wireframe design system with exploded 3D structure, connector annotations, spars…	library/mengto/technical-wireframe-info-layout/SKILL.md
+teslers-law	-	effect	Apply Tesler's Law — every process has irreducible complexity that someone must absorb	library/designer/teslers-law/SKILL.md
+test-playable-web-games	-	layout,a11y,review,perf,game,ship	Test a playable browser game end to end with deterministic fixtures and real browser evidence	library/mengto/test-playable-web-games/SKILL.md
+test-scenario	-	review,research	Write realistic usability task scenarios with success criteria and facilitation notes	library/designer/test-scenario/SKILL.md
+theming-system	-	color,style,system	Design theming architecture — brand variants, dark mode, and high-contrast — mapped through token layers	library/designer/theming-system/SKILL.md
+thinking-orbs	-	motion,a11y,effect	Add accessible animated AI loading and agent-status indicators with the React thinking-orbs library	library/mengto/thinking-orbs/SKILL.md
+threejs-landscape	-	scroll,3d,color,layout,landing	Build a live Three.js landscape that stays quiet behind a subject — a noise heightfield on a polar grid so res…	library/mengto/threejs-landscape/SKILL.md
+threejs-towers	-	motion,3d,perf,landing	Generate architecture procedurally in Three.js and film it assembling — a small geometry vocabulary that build…	library/mengto/threejs-towers/SKILL.md
+threejs-weather	-	3d,landing	Put weather into a Three.js scene that reads as weather — rain anchored inside the frustum, a storm that is th…	library/mengto/threejs-weather/SKILL.md
+tune-enemy-ai	-	layout,review,game	Build, debug, balance, or test combat enemy AI for playable action games	library/mengto/tune-enemy-ai/SKILL.md
+typography-scale	-	type,review	Create a modular type scale with size, weight, and line-height relationships	library/designer/typography-scale/SKILL.md
+unicorn-studio	-	motion,layout,perf	Use when embedding and customizing Unicorn Studio interactive animations on the web (embed, responsive sizing,…	library/mengto/unicorn-studio/SKILL.md
+unsplash-asset-images	-	media	Use when you need to pick high-quality Unsplash images for product/design assets (avatars, headshots, portrait…	library/mengto/unsplash-asset-images/SKILL.md
+usability-test-plan	-	copy,review,research	Design a usability study — research questions, methodology, participant criteria, metrics, and facilitation gu…	library/designer/usability-test-plan/SKILL.md
+user-flow-diagram	-	motion,research,game	Diagram screen-level paths, decision points, and branch logic	library/designer/user-flow-diagram/SKILL.md
+user-persona	-	motion,research	Build research-grounded personas with goals, frustrations, and behavioural patterns	library/designer/user-persona/SKILL.md
+ux-writing	-	copy	Write interface copy — microcopy, error messages, empty states, and CTAs	library/designer/ux-writing/SKILL.md
+vantajs	-	motion,3d,perf	Use when adding animated WebGL background effects with Vanta.js (setup, parameters, resizing, performance, int…	library/mengto/vantajs/SKILL.md
+version-control-strategy	-	style,system,ship	Define version control for design files, components, and libraries — branching, naming, and release	library/designer/version-control-strategy/SKILL.md
+visual-hierarchy	-	color,layout,review	Establish hierarchy through size, weight, colour, spacing, and position so the eye lands in the intended order	library/designer/visual-hierarchy/SKILL.md
+von-restorff-effect	-	layout	Apply the Von Restorff Effect — the element that differs from its neighbours is the one remembered	library/designer/von-restorff-effect/SKILL.md
+web-design-engineer	-	motion,review,landing,media	Build or redesign polished browser-rendered visual artifacts with HTML/CSS/JavaScript/React: pages, dashboards…	library/garden/web-design-engineer/SKILL.md
+web-technique-to-skill	-	scroll,3d,layout,review,media,system	Turn a visual or interaction technique you already built into a reusable web-design skill, by isolating the on…	library/mengto/web-technique-to-skill/SKILL.md
+web-video-presentation	-	media	把一篇文章或口播稿，做成"看起来像视频"的点击驱动 16:9 网页演示，可选合成口播音频。流程：原始文章 → **一次产出**口播稿 + outline 开发计划 → 用户**一次对齐** 5 件事（稿子 / outli…	library/garden/web-video-presentation/SKILL.md
+webgl-3d-object	-	motion,3d,landing	Create a real 3D WebGL object with geometric mesh depth, physically based material, directional and ambient li…	library/mengto/webgl-3d-object/SKILL.md
+webgl-laser	-	motion,3d,color,layout,copy,style,landing,effect	Create a fixed full-screen WebGL laser background effect with a thin white-hot vertical core, restrained brand…	library/mengto/webgl-laser/SKILL.md
+wireframe-spec	-	layout,copy,perf	Specify wireframe layout — content priority, component placement, and annotation	library/designer/wireframe-spec/SKILL.md
+write-like-meng-on-x	-	copy,review,perf,research	Write, rewrite, review, or continuously refine X/Twitter posts in Meng To's current voice using his deduplicat…	library/mengto/write-like-meng-on-x/SKILL.md
+write-swift	-	copy,review,perf	How to write modern Swift well — modeling with value types, Swift 6 data-race safety and approachable concurre…	library/emilkowalski/write-swift/SKILL.md
+x-bookmark-quote-posts	-	review	Check a user's latest X/Twitter bookmarks and turn recent saved posts into source-backed quote-post drafts cal…	library/mengto/x-bookmark-quote-posts/SKILL.md
+zeigarnik-effect	-	motion	Apply the Zeigarnik Effect — incomplete tasks stay mentally active	library/designer/zeigarnik-effect/SKILL.md

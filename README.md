@@ -1,28 +1,39 @@
 # craft-pipeline
 
-A single pipeline for building cinematic, motion-rich websites, assembled from seven
-open skill collections and one routing layer that decides which of them owns each
-decision.
+268 agent skills from seven open collections, plus one router that decides which two of
+them to read for the decision in front of you — and leaves the other 266 unread.
 
-268 skills went in. 51 are loaded by default; the other 219 sit in a library the
-pipeline reads on demand, so they cost nothing until a phase calls for one.
+**Always in context: ~100 tokens.** Not 20k.
 
-## Why it is split in two
+## The problem this solves
 
-Installing 268 skills at once does not give an agent 268 abilities. Their
-descriptions collide — 39 mention motion, 30 mention layout, 28 mention review —
-so two or three fire for the same question and the page ends up designed by
-committee. The descriptions alone would also cost roughly 20k tokens of context in
-every session.
+Installing 268 skills does not give an agent 268 abilities. Their descriptions collide —
+57 mention motion, 63 mention layout, 71 mention review — so two or three fire for the
+same question and the page ends up designed by committee. The descriptions alone cost
+about 20k tokens in every session, before any work starts.
 
-So the repo has two tiers:
+## How it works
 
-- **Core** (`plugins/*/skills/`, 51 skills, ~4.4k tokens of descriptions) — the
-  skills a site project actually reaches for, grouped by phase, with one skill per
-  question.
-- **Library** (`plugins/pipeline-core/library/`, 219 skills) — vendored markdown that
-  is *not* registered as skills. The `site-pipeline` and `pipeline-library` skills
-  read `library/INDEX.md` and pull the single file a phase needs.
+| Layer | What it costs | When |
+|---|---|---|
+| `site-pipeline` description | ~100 tokens | always |
+| `site-pipeline` body: phase map, cost model, ownership table, budgets | ~1.7k tokens | when a design/motion/interface decision comes up |
+| `bin/find-skill <words>` | ~300 tokens | once per decision |
+| One library `SKILL.md` | 1.5k-6k tokens | at most twice per decision |
+
+One registered skill. Everything else is a catalog line until it is needed.
+
+```bash
+$ find-skill scroll pinned hero
+scroll-scrubbed-visual-sequence  p5  [scroll,landing,media]  Build reversible scroll-controlled…
+cinematic-scroll-storytelling    p5  [motion,scroll,type]    Create cinematic scroll-driven landing…
+build-threejs-scroll-worlds      p6  [scroll,3d,copy]        Build rich, scroll-controlled real-time…
+…
+```
+
+Eight lines back — name, phase, tags, trigger. Usually enough to decide; sometimes enough to
+answer. When two tie, the router asks you one line instead of reading both. That question is
+the cheapest move in the pipeline and it prevents the most expensive mistake.
 
 ## Install
 
@@ -31,47 +42,51 @@ So the repo has two tiers:
 /plugin install pipeline-core@craft-pipeline
 ```
 
-`pipeline-core` is the one to install first: it carries the routing table and the
-whole library. Add the others as the work needs them.
+## What the router carries
 
-| Plugin | Skills | What it covers |
-|---|---|---|
-| `pipeline-core` | 4 + library | Routing table, phase map, verification loop, 219-skill library |
-| `craft-direction` | 10 | Taste, art direction, reference intake, brand worlds |
-| `craft-interface` | 11 | Layout, typography, colour, accessibility, UI craft, reviews |
-| `craft-motion` | 17 | Animation decisions, scroll choreography, motion review |
-| `craft-3d` | 4 | Three.js, WebGL landing pages, scene performance |
-| `craft-ship` | 5 | Performance, QA checklists, accessibility audit, release |
+- **Four questions before any read** — name the decision, name the phase, check the session
+  log, judge whether it is worth the tokens.
+- **A phase map**, 0 to 8: intake, architecture, direction, structure and copy, build, motion,
+  media and 3D, QA, ship. Each phase states what it owes the next one.
+- **An ownership table** so competing skills resolve without a lookup: taste is `tastemaker`,
+  interface correctness is `better-interface`, building motion is `animate`, judging motion is
+  `review-animations`, page structure is `landing-page-design`.
+- **Budgets**: two reads per decision, six per phase, twelve per project. Hitting the ceiling
+  is a signal about the direction, not the budget.
+- **A session log** at `.pipeline/session.md` — the rules extracted from a skill, so the next
+  decision reads four lines instead of re-reading 4k tokens.
+- **Deference**: if `10k-websites` / `chatgpt-scrollcraft` is installed, that skill owns the
+  build and this one only routes underneath it.
 
-## How it runs
+## Layout
 
-`site-pipeline` maps the work to nine phases — intake, architecture, direction,
-structure and copy, build, motion, media and 3D, QA, ship — and names the skills
-that own each one. It also carries a conflict table: taste is `tastemaker`, interface
-correctness is `better-interface`, building motion is `animate`, judging motion is
-`review-animations`, and so on. One owner per question, stated out loud.
-
-If you already run the `10k-websites` / `chatgpt-scrollcraft` skill, that skill keeps
-the build: its phases, its gates, its quality floor. `site-pipeline` then serves only
-as the routing table underneath it. See `docs/phases.md`.
+```
+authored/pipeline-core/     hand-written: the router, its references, bin/find-skill
+plugins/pipeline-core/      generated — do not hand-edit
+  skills/site-pipeline/       the one registered skill
+  library/<upstream>/<name>/  268 vendored skills, never auto-loaded
+  catalog/index.tsv           one grep-able line per skill
+  catalog/by-phase/*.tsv      the curated per-phase shortlists
+  bin/find-skill              the lookup command
+scripts/sources.json        pinned commits, phase assignments, tag rules
+scripts/vendor.py           rebuilds plugins/ from the pinned upstreams
+scripts/validate.py         frontmatter, catalog integrity, context cost
+```
 
 ## Updating
 
-Every upstream is pinned to a commit in `scripts/sources.json`. To pull newer
-versions:
-
 ```bash
-python3 scripts/vendor.py     # re-fetch at the pinned commits, rebuild both tiers
-python3 scripts/validate.py   # frontmatter, name collisions, size, context cost
+python3 scripts/vendor.py     # re-fetch at pinned commits, rebuild library + catalog
+python3 scripts/validate.py   # frontmatter, dead catalog paths, cost report
 ```
 
-Bump a `commit` field first to move an upstream forward. Nothing in `plugins/` or
-`library/` is hand-edited — both trees are generated, and local changes there are
-overwritten. Author your own skills in `authored/<plugin>/<skill>/`; the vendor
-script copies them into the plugin on every build.
+Bump a `commit` in `scripts/sources.json` to move an upstream forward. Promote a skill into a
+phase by naming it under `phases.<n>.owners.<upstream>` — that changes ranking and `--phase`
+output and costs no context. Author your own always-on skills in
+`authored/pipeline-core/<name>/`; they survive every rebuild.
 
 ## Licences
 
-All seven upstreams are MIT. Each vendored folder carries a `_source.json` with its
-repo, commit, licence and holder. See `NOTICE.md` for the full table and for the one
-collection that is referenced rather than vendored.
+All seven upstreams are MIT. Each vendored folder carries `_source.json` with repo, commit,
+licence and holder. `NOTICE.md` has the full table, plus the one collection referenced rather
+than vendored for want of a licence.

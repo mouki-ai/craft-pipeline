@@ -1,0 +1,6 @@
+# name	phase	tags	trigger	path
+accessibility-audit	8	a11y,review	Audit an existing interface against WCAG, producing findings with severity ratings and remediation steps	library/designer/accessibility-audit/SKILL.md
+browser-video-recording	8	media,effect	Create polished 60 fps 4:3 4K browser screen-recording style videos from Codex in-app browser captures, with b…	library/mengto/browser-video-recording/SKILL.md
+design-qa-checklist	8	review	Build a QA checklist for verifying that a build matches the design	library/designer/design-qa-checklist/SKILL.md
+optimize-web-animations	8	motion,scroll,3d,review,perf,effect	Profile, audit, and optimize frontend page performance with emphasis on animation work, memory-leak risks, lon…	library/mengto/optimize-web-animations/SKILL.md
+publish-project-to-github	8	review,ship	Package a finished local project into an intentional GitHub repository, create a strong README and visual prev…	library/mengto/publish-project-to-github/SKILL.md

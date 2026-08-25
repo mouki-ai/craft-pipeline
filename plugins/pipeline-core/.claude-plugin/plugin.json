@@ -1,7 +1,7 @@
 {
   "name": "pipeline-core",
-  "description": "The orchestrator. Owns the phases, the gates and the routing table.",
-  "version": "0.1.0",
+  "description": "The router. One always-on skill that picks the right skills from a 268-entry catalog and reads only those.",
+  "version": "0.2.0",
   "author": {
     "name": "Dart"
   }

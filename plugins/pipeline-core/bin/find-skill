@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+"""Pick skills out of the catalog without reading any of them.
+
+  find-skill scroll pinned hero      rank the catalog against these words
+  find-skill --phase 5               everything the pipeline assigns to phase 5
+  find-skill --tag motion --tag 3d   everything carrying these tags
+  find-skill --tags                  the tag vocabulary with counts
+
+Prints at most 8 lines. Each line is one skill: name, phase, tags, trigger, path.
+Read a SKILL.md only after this tells you which one, and never more than two.
+"""
+import re, sys
+from pathlib import Path
+
+CAT = Path(__file__).resolve().parent.parent / "catalog"
+LIMIT = 8
+
+
+def rows():
+    for line in (CAT / "index.tsv").read_text().splitlines():
+        if line.startswith("#"):
+            continue
+        p = line.split("\t")
+        if len(p) == 5:
+            yield dict(zip(("name", "phase", "tags", "trigger", "path"), p))
+
+
+def show(rs, note=""):
+    rs = rs[:LIMIT]
+    if not rs:
+        print("no match. widen the words, or decide it yourself and say so.")
+        return
+    w = max(len(r["name"]) for r in rs)
+    for r in rs:
+        tags = ",".join(r["tags"].split(",")[:3])
+        trig = r["trigger"][:70].rstrip() + ("…" if len(r["trigger"]) > 70 else "")
+        print(f"{r['name']:<{w}}  p{r['phase']}  [{tags}]  {trig}")
+    print(f"paths: library/<upstream>/<name>/SKILL.md — " + ", ".join(r["path"].split("/")[1] + "/" + r["name"] for r in rs[:3]) + " …")
+    if note:
+        print(note)
+
+
+def main(argv):
+    if "--tags" in argv:
+        print((CAT / "tags.txt").read_text().strip())
+        return
+    all_rows = list(rows())
+    if "--phase" in argv:
+        ph = argv[argv.index("--phase") + 1]
+        show([r for r in all_rows if r["phase"] == ph])
+        return
+    if "--tag" in argv:
+        want = {argv[i + 1] for i, a in enumerate(argv) if a == "--tag"}
+        show([r for r in all_rows if want & set(r["tags"].split(","))])
+        return
+    words = [w.lower() for w in argv if not w.startswith("-")]
+    if not words:
+        print(__doc__)
+        return
+    scored = []
+    for r in all_rows:
+        name, tags, trig = r["name"].lower(), r["tags"].split(","), r["trigger"].lower()
+        s = 0
+        for w in words:
+            if w in name.split("-"):
+                s += 6
+            elif w in name:
+                s += 4
+            if w in tags:
+                s += 3
+            if re.search(rf"\b{re.escape(w)}", trig):
+                s += 2
+        if r["phase"] != "-":
+            s += 1  # the pipeline already vouched for this one
+        if s:
+            scored.append((s, r))
+    scored.sort(key=lambda x: (-x[0], x[1]["name"]))
+    top = [r for _, r in scored]
+    tie = len(scored) > 1 and scored[0][0] == scored[1][0]
+    show(top, "two or more tie: ask the user which one, in one line, before reading either." if tie else "")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

@@ -1,0 +1,3 @@
+# name	phase	tags	trigger	path
+audit-verify-explain-grade-5	7	review	Audit work, verify claims with concrete evidence, and explain the result in simple grade-5 language	library/mengto/audit-verify-explain-grade-5/SKILL.md
+iterate-until-verified	7	review	Apply a prompt-agnostic execution and verification loop to any substantial task while preserving the original …	library/mengto/iterate-until-verified/SKILL.md
